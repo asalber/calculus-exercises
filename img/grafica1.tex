@@ -1,0 +1,24 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{pstricks-add}
+\pagestyle{empty}
+\begin{document}
+\psset{xunit=1.0cm,yunit=1.0cm,algebraic=true,dotstyle=o,dotsize=3pt 0,linewidth=0.8pt,arrowsize=3pt 2,arrowinset=0.25}
+\begin{pspicture*}(-4.3,-6.38)(16.08,6.3)
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=0.5,Dy=0.5,ticksize=-2pt 0,subticks=2]{->}(0,0)(-4.3,-6.38)(16.08,6.3)
+\psline(-0.35,1.57)(0.55,1.57)
+\psline(-0.35,1.93)(0.55,1.93)
+\psline(-0.35,2.29)(0.55,2.29)
+\psline(-0.35,2.65)(0.55,2.65)
+\psplot[plotpoints=200]{-4.3}{16.080000000000002}{1.7+3*(x-2)-4.3*(x-2)^2+(x-2)^3}
+\psdots[dotstyle=*](0.25,1.57)
+\rput[bl](0.15,1.67){$a = 1.7$}
+\psdots[dotstyle=*](0.37,1.93)
+\rput[bl](0.27,2.03){$b = 3$}
+\psdots[dotstyle=*](-0.29,2.29)
+\rput[bl](-0.39,2.39){$c = -4.3$}
+\psdots[dotstyle=*](0.19,2.65)
+\rput[bl](0.09,2.75){$d = 1$}
+\rput[bl](1.41,-2.57){$f$}
+\end{pspicture*}
+\end{document}
