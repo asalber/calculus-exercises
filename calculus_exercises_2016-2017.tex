@@ -3,7 +3,7 @@
 
 \documentclass[a4paper,titlepage]{article}
 %===============================================
-\usepackage[english]{babel} 
+\usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[top=3cm, bottom=3cm, left=2.54cm, right=2.54cm, marginparwidth=2mm]{geometry}
 
@@ -49,55 +49,55 @@
 \titleformat*{\section}{\normalfont\Large\bfseries\color{color1}}
 
 
-% SOLUTIONS
-\newif\ifsolution
-% \solutiontrue  % Comment to hide solutions
-
-\newtheoremstyle{solution} % Theorem style name
-{-5pt} % Space above
-{7pt} % Space below
-{\normalfont} % Body font
-{-28pt} % Indent amount
-{\bf} % Theorem head font
-{\kern-11.5pt} % Punctuation after theorem head
-{19pt} % Space after theorem head
-{\begin{tikzpicture}
-\draw (0,0) node [fill=color2, xshift=4mm, inner
-sep=2pt]{\includegraphics[scale=0.3]{img/bulb}};
-\end{tikzpicture}}
-
-\theoremstyle{solution}
-\newtheorem{solutionT}{Solution}
-
-\RequirePackage[framemethod=default]{mdframed}
-
-% Solution box
-\newmdenv[skipabove=7pt,
-skipbelow=10pt,
-rightline=false,
-leftline=true,
-topline=false,
-bottomline=false,
-linecolor=color2,
-backgroundcolor=black!5,
-innerleftmargin=5pt,
-innerrightmargin=5pt,
-innertopmargin=4pt,
-innerbottommargin=5pt,
-leftmargin=0pt,
-rightmargin=0pt,
-linewidth=4pt]{solBox}
-
-\usepackage{comment}
-\ifsolution
-  \newenvironment{sol}{\ifsolution\begin{solBox}\begin{solutionT}}{\end{solutionT}\end{solBox}\fi}
-\else
-  \excludecomment{sol}
-\fi
+% % SOLUTIONS
+% \newif\ifsolution
+% % \solutiontrue  % Comment to hide solutions
+%
+% \newtheoremstyle{solution} % Theorem style name
+% {-5pt} % Space above
+% {7pt} % Space below
+% {\normalfont} % Body font
+% {-28pt} % Indent amount
+% {\bf} % Theorem head font
+% {\kern-11.5pt} % Punctuation after theorem head
+% {19pt} % Space after theorem head
+% {\begin{tikzpicture}
+% \draw (0,0) node [fill=color2, xshift=4mm, inner
+% sep=2pt]{\includegraphics[scale=0.3]{img/bulb}};
+% \end{tikzpicture}}
+%
+% \theoremstyle{solution}
+% \newtheorem{solutionT}{Solution}
+%
+% \RequirePackage[framemethod=default]{mdframed}
+%
+% % Solution box
+% \newmdenv[skipabove=7pt,
+% skipbelow=10pt,
+% rightline=false,
+% leftline=true,
+% topline=false,
+% bottomline=false,
+% linecolor=color2,
+% backgroundcolor=black!5,
+% innerleftmargin=5pt,
+% innerrightmargin=5pt,
+% innertopmargin=4pt,
+% innerbottommargin=5pt,
+% leftmargin=0pt,
+% rightmargin=0pt,
+% linewidth=4pt]{solBox}
+%
+% \usepackage{comment}
+% \ifsolution
+%   \newenvironment{sol}{\ifsolution\begin{solBox}\begin{solutionT}}{\end{solutionT}\end{solBox}\fi}
+% \else
+%   \excludecomment{sol}
+% \fi
 
 % PDF
 \usepackage[colorlinks=true]{hyperref}
-\hypersetup{pdfauthor={Alfredo Sánchez Alberca (asalber@ceu.es)}, pdftitle={Ejercicios de Estad\'istica} }
+\hypersetup{pdfauthor={Alfredo Sánchez Alberca (asalber@ceu.es)}, pdftitle={Calculus problems} }
 \usepackage{url}
 
 \renewcommand{\floatpagefraction}{.8}
@@ -123,7 +123,7 @@ linewidth=4pt]{solBox}
 \textcolor{blueceu}{Degree:} &  Pharmacy\\
 \textcolor{blueceu}{Year:} & 2016-2017\\
 \textcolor{blueceu}{Authors:} & Pablo Ares Gastesi (\url{pablo.aresgastesi@ceu.es})\\
-& Eduardo L\'opez Ram\'\irez (\url{elopez@ceu.es})\\
+& Eduardo L\'opez Ram\'irez (\url{elopez@ceu.es})\\
 & Anselmo Romero Lim\'on (\url{arlimon@ceu.es})\\
 & Alfredo S\'anchez Alberca (\url{asalber@ceu.es})
 \end{tabular}
@@ -138,12 +138,8 @@ linewidth=4pt]{solBox}
 \newpage
 
 \input{derivatives}
-% \input{diferencial}
-% \input{derivadas_implicitas}
-% \input{derivadas_parametricas}
-% \input{derivadas_trayectorias}
-% \input{extremos}
-% \input{taylor}
+\input{extrema}
+\input{taylor}
 % \input{derivadas_parciales}
 % \input{derivadas_superficies}
 % \input{derivadas_implicitas_n_variables}
@@ -160,7 +156,7 @@ linewidth=4pt]{solBox}
 
 \section{One-variable Differentiable Calculus}
 \begin{enumerate}[leftmargin=*]
-% Derivadas
+% Derivatives
 \item \useproblem{der-34}
 \item \useproblem{der-33}
 \item \useproblem{der-32}
@@ -174,20 +170,20 @@ linewidth=4pt]{solBox}
 \item \useproblem{der-29}
 \item \useproblem{der-35}
 \item \useproblem{der-30}
-% % Taylor
-% \item \useproblem{tay-2}
-% \item \useproblem{tay-3}
-% \item \useproblem{tay-4}
-% \item \useproblem{tay-7}
-% % Extremos
-% \item \useproblem{ext-1}
-% \item \useproblem{ext-2}
-% \item \useproblem{ext-12}
-% \item \useproblem{ext-8}
-% \item \useproblem{ext-9}
-% \item \useproblem{ext-3}
-% \item \useproblem{ext-5}
-% \item \useproblem{ext-7}
+% Taylor
+\item \useproblem{tay-2}
+\item \useproblem{tay-3}
+\item \useproblem{tay-4}
+\item \useproblem{tay-7}
+% Extrema
+\item \useproblem{ext-1}
+\item \useproblem{ext-2}
+\item \useproblem{ext-12}
+\item \useproblem{ext-8}
+\item \useproblem{ext-9}
+\item \useproblem{ext-3}
+\item \useproblem{ext-5}
+\item \useproblem{ext-7}
 %
 % \section{Ecuaciones Diferenciales}
 % \begin{enumerate}[leftmargin=*,resume]
