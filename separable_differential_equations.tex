@@ -1,0 +1,870 @@
+% Autor: Alfredo Sánchez Alberca (asalber@ceu.es)
+
+\newproblem{edosep-1}{gen}{}
+%ENUNCIADO
+{Solve the following ODE (separation of variables):
+\begin{enumerate}
+\item $x\sqrt{1-y^2}+y\sqrt{1-x^2}y'=0$ with initial condition $y(0)=1$.
+\item $(1+e^x)yy'=e^y$ with initial condition $y(0)=0$.
+\item e$^y(1+x^2)y'-2x(1+\mbox{e}^y)=0$.
+\item $y-xy'=a(1+x^2y')$.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+\begin{enumerate}
+\item $-\sqrt{1-y^2}=\sqrt{1-x^2}-1$.
+\item $e^{-y}(y+1)=\log(1+e^x)-x-\log 2+1$.
+\item $y=\log(C(1+x^2)-1)$.
+\item $y=C\frac{x}{ax+1}+a$.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-2}{qui}{}
+%ENUNCIADO
+{Radioactive decay behaves according to the following differential equation:
+\[
+\frac{\partial x}{\partial t}+ax=0,
+\]
+where $x$ stands for mass, $t$ time and $a$ is a positive constant.
+The half-life $T$ is the time that takes for the matter to become half of
+its initial value.
+Write $T$ as function of $a$, and compute $a$ for the uranium isotope $U^{238}$, if it is known that $T=4.5\cdot10^9$ years.
+}
+%SOLUCIÓN
+{$T = \frac{\log 2}{a}$ and $a=1.54\cdot 10^{-10}$ years$^{-1}$.
+}
+%RESOLUCIÓN
+{}
+
+
+
+\newproblem{edosep-3}{qui}{}
+%ENUNCIADO
+{The speed at which sugar dissolves into water is proportional to the amount of sugar left without dissolving.
+Suppose we have 13.6 kg of sugar that we want to mix with water, and after 4 hours there are 4.5 kg
+without dissolving.
+How long will it take, from the beginning of the process, for 95\% of the sugar to be dissolved?}
+%SOLUCIÓN
+{$C(t)= 13.6e^{-0.276 t}$ and the instant at which 95\% of the sugar is dissolved is $t_0=10.854$ hours.
+}
+%RESOLUCIÓN
+{}
+
+
+
+\newproblem{edosep-4}{qui}{*}
+%ENUNCIADO
+{A chemical process follows the differential equation:
+\[
+y'-2y=4,
+\]
+where $y=f(t)$ is the concentration of oxygen at moment $t$ (in
+seconds).
+Suppose there is no oxygen at the beginning of the experiment; what will the concentration (mg/lt) be equal to after 3 seconds?
+At what moment will the concentration be equal to 200 mg/lt?
+}
+%SOLUCIÓN
+{$y(t)=2e^{2t}-2$. The oxygen concentration after 3 secons is $y(3)=804$ mg/lt and the moment at which the oxygen concentration is 200 mg/lt is $t_0=2.3076$ s.
+}
+%RESOLUCIÓN
+{}
+
+
+
+\newproblem{edosep-5}{med}{}
+%ENUNCIADO
+{La sala de disección de un forense se mantiene fría a una temperatura constante de $5^\circ C$. Mientras se encontraba
+realizando la autopsia de una víctima de asesinato, el forense es asesinado y el cuerpo de la víctima robado. A las 10
+de la mañana el ayudante el forense descubre su cadáver a una temperatura de $23^\circ C$ y llama a la policía. A medio
+día llega ésta y comprueba que la temperatura del cadáver es de $18'5^\circ C$. Supuesto que el forense tenía en vida
+una temperatura normal de $37^\circ C$, ¿a qué hora fue asesinado?}
+%SOLUCIÓN
+{Fue asesinado a las 6 de la mañana aproximadamente.
+}
+%RESOLUCIÓN
+{}
+
+
+
+\newproblem{edosep-6}{qui}{*}
+%ENUNCIADO
+{Temperature and time, during certain process, are related by the following differential equation:
+\[
+x't^2-x't+x'-2xt+x=0,
+\]
+where $x$ denotes the temperature (in Kelvin degrees) and $t$ the time (in seconds).
+Suppose the initial temperature is 100 K; compute the general expression of the temperature as a function of time. What will be the temperature after 3 seconds?}
+%SOLUCIÓN
+{$x(t)=100(t^2-t+1)$ and the system temperature after 3 seconds is $x(3)=700$ K.
+}
+%RESOLUCIÓN
+{En primer lugar, intentamos separar las variables para ver si se trata de una ecuación de variables separables:
+\[\renewcommand{\arraystretch}{2}
+\begin{array}{c}
+x't^2  - x't + x' - 2xt + x = 0 \Leftrightarrow x'(t^2-t+1)+x(-2t+1)=0 \Leftrightarrow\\
+\Leftrightarrow \dfrac{dx}{dt}(t^2-t+1)=x(2t-1) \Leftrightarrow \dfrac{dx}{x}=\dfrac{2t-1}{t^2-t+1} dt
+\end{array}
+\]
+Así pues, se trata de una ecuación diferencial ordinaria de variables separables. Integándo en ambos lados de la
+ecuación tenemos
+\[\renewcommand{\arraystretch}{2}
+\begin{array}{c}
+\dint \dfrac{dx}{x}=\dint \dfrac{2t-1}{t^2-t+1}\,dt \Leftrightarrow \log |x|= \log |t^2-t+1|+C \Leftrightarrow \\
+\Leftrightarrow \exp(\log |x| )= \exp(\log |t^2-t+1|+C) \Leftrightarrow x=(t^2-t+1)e^C,
+\end{array}
+\]
+Y renombrando $e^C$ como una constante $C$, llegamos a la solución general de la ecuación
+\[
+x(t)=C(t^2-t+1).
+\]
+
+Imponiendo ahora la condición inicial $x(0)=100 K$, tenemos
+\[
+x(0)=C(0^2-0+1)=C=100,
+\]
+de manera que la solución particular es
+\[
+x(t)=100(t^2-t+1).
+\]
+
+Por último, la temperatura del sistema a los 3 segundos de comenzar el experimento será
+\[
+x(3)=100(3^2-3+1)=700\textrm{ K}.
+\]
+}
+
+
+\newproblem{edosep-7}{far}{*}
+%ENUNCIADO
+{A drug, kept in a refrigerator at 2ºC, should be administered to a patient when the drug's temperature is equal to 15ºC.
+At 9 o'clock the drug is taken out of the fridge and placed at a room, where the
+temperature is equal to 22ºC.
+At 10 o'clock the drug's temperature is equal to 10ºC.
+Assume the speed at which the drug's temperature goes up is proportional to the difference between the temperature of the drug and that of the room.
+At what time will the medicine be ready to be given to the patient?}
+%SOLUCIÓN
+{At $11.06$ hours.
+}
+%RESOLUCIÓN
+{La ecuación diferencial que rige el enfriamiento de los cuerpos es
+\[
+\frac{dT}{dt}k(T-T_a),
+\]
+donde $T$ es la temperatura del cuerpo, $t$ es el tiempo, $T_a$ es la
+temperatura del medio que se supone constante y en este caso es 22ºC, y $k$ es
+una constante de proporcionalidad.
+
+Como se trata de una ecuación de variables separables, procedemos a separar las
+variables:
+\[
+\frac{dT}{dt}=k(T-22) \Leftrightarrow \frac{dT}{T-22}=kdt,
+\]
+e integrar:
+\[
+\int \frac{dT}{T-22}=\int kdt \Leftrightarrow \log|T-22|=kt+C \Leftrightarrow
+T-22 = e^{kt+C}=e^{kt}e^C
+\]
+y reescribiendo $e^C$ como una constante $C$ llegamos a la solución general:
+\[T(t)=Ce^{kt}+22.\]
+
+Imponemos ahora las condiciones iniciales para llegar a la solución particular.
+En primer lugar, sabemos que en el instante en que se saca el fármaco
+del frigorífico la temperatura del mismo era de 2ºC. Fijaremos dicho instante
+como el instante inicial $t=0$ (que en realidad son las 9 h). Así pues, se
+tiene:
+\[
+T(0)=2 \Leftrightarrow Ce^{k\cdot 0}+22 = 2 \Leftrightarrow C = -20
+\]
+
+En segundo lugar, transcurrida una hora del instante inicial ($t=1$), la
+temperatura del fármaco era de 10ºC, de manera que se tiene:
+\[
+T(1)=10 \Leftrightarrow -20e^{k\cdot 1}+22 =10 \Leftrightarrow -20e^k = -12
+\Leftrightarrow e^k = 12/20 \Leftrightarrow k=\log (12/20)=-0.51.
+\]
+Por consiguiente, llegamos a la solución particular
+\[
+T(t)= 22-20e^{-0.51t}
+\]
+
+Para terminar calculamos el tiempo que debe transcurrir hasta que el medicamento
+alcance los 15ºC a que debe administrarse:
+\[
+T(t)=15 \Leftrightarrow 22-20e^{-0.51t}=15 \Leftrightarrow
+e^{-0.51t}=\frac{22-15}{20} \Leftrightarrow t=\frac{\log(7/20)}{-0.51}=2.06
+\mbox{ h}.
+\]
+Por tanto, debe administrarse unas $2.06$ horas después del instante inicial,
+aproximadamente a las $11.06$ h.
+}
+
+
+\newproblem{edosep-8}{qui}{*}
+%ENUNCIADO
+{Una cámara de 500 l está llena de aire en condiciones normales
+cuando comienza a entrar oxí­geno puro a razón de 5 litros por minuto.
+Al mismo tiempo se extrae la misma cantidad de la mezcla uniforme. ¿Qué
+concentración de oxí­geno habrá a los 10 minutos? Suponiendo que una
+concentración de oxí­geno en el aire superior a 0.5 gr/l puede ser perjudicial,
+¿cuándo será peligroso respirar el aire de la cámara?
+
+\textbf{Nota}: La concentración de oxí­geno en el aire en condiciones normales es
+de $0.15$ gr/l, mientras que en el oxí­geno puro es de $0.71$ gr/l. La ecuación
+diferencial que explica el fenómeno es
+\[
+\frac{dx}{dt}=c_ev_e-c_sv_s
+\]
+donde $x$ es la cantidad de oxí­geno en la cámara en el instante $t$, $c_e$ y
+$c_s$ son las concentraciones de oxí­geno en el aire que entra y sale
+respectivamente, y $v_e$ y $v_s$ son las velocidades de entrada y salida del
+aire.
+}
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{}
+
+
+
+\newproblem{edosep-9}{qui}{*}
+%ENUNCIADO
+{Sabiendo que el núcleo del Polonio 210 es radiactivo y que su tiempo de semidesintegración (tiempo necesario para que
+la cantidad inicial se reduzca a la mitad) es de 138 días:
+\begin{enumerate}
+\item ¿Qué cantidad inicial de Polonio 210 teníamos si al cabo de 100 días nos quedan 20 gramos?
+
+\item ¿Qué tiempo tendrá que transcurrir para que se desintegre un 10\% de la masa inicial?
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-10}{amb}{*}
+%ENUNCIADO
+{Estudios científicos han demostrado que la longitud en función
+del tiempo de muchas especies, entre ellas las de gran variedad de
+peces, viene dada por la ecuación de Bertalanffy:
+\[
+\frac{{dL}}{{dt}} = k\left( {L_f  - L(t)} \right)
+\]
+donde $L_f$ es la longitud de la especie al final del periodo de
+crecimiento, y $k$ es una constante. Suponiendo que la longitud de
+una especie de peces al final de su periodo de crecimiento es de un
+metro, y que con uno y dos meses mide, respectivamente, 20 y 40 cm:
+\begin{enumerate}
+\item ¿Cuál será la longitud de esa especie para todo tiempo $t$?
+\item ¿Cuánto tiempo debe transcurrir desde su nacimiento hasta que la longitud sea de 95 cm?
+\end{enumerate}
+}
+%SOLUCIÓN
+{\begin{enumerate}
+\item $L(t)=-1.0667e^{-0.2877t}+1$.
+\item $t_0=10.637$ años.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-11}{qui}{*}
+%ENUNCIADO
+{The amount of certain chemical compound $M$ (in grams) in a chemical reaction is a function of time (in seconds).
+The amount of the substance $M$ behaves as per the following differential equation:
+\[
+M'-(a+b)M=0
+\]
+where $a$ and $b$ are contants.
+Suppose we start with 20 g of the compund, and after 10 seconds we have 40 g.
+Compute:
+\begin{enumerate}
+\item The amount of the compound at any given time $t$.
+\item The amount of the compound after half a minute.
+\item When will the amount $M$ be equal to 100 g?
+\end{enumerate}
+}
+%SOLUCIÓN
+{\begin{enumerate}
+\item $M(t) = 20\;e^{\frac{{\ln 2}}{{10}}t}.$
+\item $M(30) = 160$ gr.
+\item $t_0  = 23.22$ s.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{
+\begin{enumerate}
+\item Para calcular la masa $M$ para todo tiempo $t$ debemos
+resolver la ecuación diferencial separable del enunciado.
+Procediendo a su separación obtenemos:
+\[
+M' - (a + b)M = 0 \Leftrightarrow \frac{{dM}}{{dt}} = (a + b)M
+\Leftrightarrow \frac{{dM}}{M} = (a + b)dt
+\]
+e integrando la ecuación separada:
+\[
+\int {\frac{{dM}}{M}}  = \int {(a + b)dt}  \Leftrightarrow \ln M =
+(a + b)t + C_0
+\]
+donde $C_0$ es una constante de integración.
+
+Por último, tomando exponenciales en ambos miembros de la ecuación
+integrada, y teniendo en cuenta que la exponencial de una constante
+es una nueva constante a la que llamamos $C$, nos queda:
+\[
+M(t) = e^{(a + b)t + C_0 }  = e^{(a + b)t} e^{C_0 }  = Ce^{(a + b)t}
+\]
+Como, además, tenemos 2 datos iniciales, podemos calcular los
+valores tanto de $C$ como de la suma $a+b$:
+\[
+M(0) = 20 = Ce^{(a + b)0}  = C
+\]
+\[
+M(10) = 40 = Ce^{(a+b)10}=20e^{(a + b)10}  \Leftrightarrow e^{(a +
+b)10} = 2 \Leftrightarrow a + b = \frac{{\ln 2}}{{10}}
+\]
+Por lo tanto, la masa $M$ para todo tiempo $t$ vale:
+\[
+M(t) = 20\;e^{\frac{{\ln 2}}{{10}}t}
+\]
+
+\item Una vez que tenemos la masa para todo tiempo $t$, a los 30 s
+tendremos:
+\[
+M(30) = 20\;e^{\frac{{\ln 2}}{{10}}30}  = 20e^{3\ln 2}  = 160
+\]
+donde la cantidad viene dada en gramos.
+
+\item Para calcular el tiempo $t_0$ que debe transcurrir hasta que
+tengamos 100 g de masa, sustituimos de nuevo en la solución general:
+\[
+M(t_0 ) = 100 = 20\;e^{\frac{{\ln 2}}{{10}}t_0 }  \Leftrightarrow
+\ln 5 = \frac{{\ln 2}}{{10}}t_0  \Leftrightarrow t_0  = \frac{{10\ln
+5}}{{\ln 2}} = 23.22
+\]
+donde el tiempo viene dado en segundos.
+\end{enumerate}
+}
+
+
+\newproblem{edosep-12}{qui}{*}
+%ENUNCIADO
+{Se sabe que en una reacción química una sustancia se transforma en otra a una velocidad  proporcional a la cantidad
+sin transformar. Si a las 2 horas del comienzo de la reacción había 20 gr. de la sustancia original y a las 3 horas
+quedaban 10 gr., ¿qué cantidad es sustancia había al comienzo de la reacción? ¿Cuándo se habrá transformado el 90\% de
+la sustancia?}
+%SOLUCIÓN
+{La cantidad original de sustancia era $x(0)=80$  gr y el tiempo que tiene que pasar para que se transforme el $90\%$
+es $3.32$ horas.  }
+%RESOLUCIÓN
+{Llamemos $x(t)$ a la función que mide la cantidad de sustancia original en el instante $t$. Según el enunciado, la
+transformación química responde a la ecuación diferencial
+\[
+\frac{dx}{dt}=kx.
+\]
+Se trata de una ecuación diferencial de variables separables, así que, para resolverla separamos las variables e
+integramos:
+\[
+\frac{dx}{dt}=kx \Leftrightarrow \frac{dx}{x}=kdt \Leftrightarrow \int \frac{dx}{x} = \int k\,dt \Leftrightarrow
+\log|x| = kt+C \Leftrightarrow x(t)=Ce^{kt},
+\]
+que es la solución general de la ecuación.
+
+Para determinar las constantes imponemos las condiciones inicales:
+\begin{align*}
+x(2)=20 &\Leftrightarrow Ce^{2k} = 20 \Leftrightarrow e^{2k} = 20/C \Leftrightarrow 2k =
+\log(20/C) \Leftrightarrow k=\log(20/C)/2,\\
+x(3)=10 &\Leftrightarrow Ce^{3k} = 10 \Leftrightarrow Ce^{\frac{3}{2}\log(20/C)} = Ce^{\log(20/C)^{3/2}}=
+C\left(\frac{20}{C}\right)^{3/2}=10 \Leftrightarrow C^{1/2}=\frac{20^{3/2}}{10} \Leftrightarrow C = 80.
+\end{align*}
+de donde se deduce $k=\log(20/80)/2 = -\log 2$, y en consecuencia, la solución particular de la ecuación es
+\[
+x(t)=80e^{-\log2\cdot t}.
+\]
+
+Según esta ecuación, la cantidad original de sustancia en el instante inicial $(t=0)$ era
+\[
+x(0)=80e^{-\log2\cdot 0} = 80 \mbox{ gr},
+\]
+y el tiempo necesario para que se transforme el 90\% de la sustancia, es decir, que quede el 10\% será
+\[
+x(t_{0})=80*0.1=8 \Leftrightarrow 80e^{-\log2\cdot t_{0}}=8 \Leftrightarrow
+e^{-\log2\cdot t_{0}}=8/80=0.1 \Leftrightarrow t_{0}=-\frac{\log0.1}{\log2}=3.32 \mbox{ horas.}
+\]
+}
+
+
+\newproblem{edosep-13}{qui}{}
+%ENUNCIADO
+{A water tank filled with 500 lts of water contains 5 kgs of salt dissolved into the water.
+Suppose we start pouring into the tank a solution of water with 0.4 kg of salt per liter, at a rate of 10 lts per minute.
+We also stir the water tank, to keep a uniform distribution of salt, and, at the same time, we release water (with salt) at the same rate of 10 lts per minute.
+How much salt will there be in the tank after 5 minutes?
+And after 1 hour?
+
+\noindent\textbf{Remark:} The variation rate of salt in the tank is equal to the difference between the amount of salt that comes into the tank and the amount of salt that is taken from the tank.
+}
+%SOLUCIÓN
+{$C(t)=-195e^{-t/50}+200$. The amount of salt after 5 minutes is $C(5)=23.557$ kg and after 1 hour $C(60)=141.267$ kg.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-14}{qui}{*}
+%ENUNCIADO
+{During certain chemical reaction, a compound gets changed into another substance at a rate proportional to the square of the amount (of the original compund) that has not changed.
+We start with 20 g of the original substance, and after 1 hour wew observed that only half of it is left.
+At what moment in time will 75\% of the substance have converted into the new compund?}
+%SOLUCIÓN
+{$C(t)=\frac{20}{t+1}$ and the moment at which 75\% of the amount of the substante has been converted is  $t_0=3$ hours.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-15}{gen}{}
+%ENUNCIADO
+{Cuando el movimiento se produce en un medio en el que hay cierta resistencia, como en el aire, aparece una fuerza
+proporcional a la velocidad que se opone al mismo. En este caso, las leyes de Newton conducen a la siguiente ecuación
+diferencial para la velocidad de caída en el medio:
+\[
+m\frac{{dv}} {{dt}} =  - kv - mg
+\]
+donde $v$ es la velocidad, $m$ es la masa, $g$ es la gravedad, y $k$ es la constante de proporcionalidad.
+
+Si se dispara un móvil directamente hacia arriba al nivel del suelo, con velocidad inicial $100$ m/s, una masa de
+$0.05$ kg, una constante $k$ de $0,002$ kg/s y $g$ de $10$ m/s$^2$, ¿cuál será la máxima altura del móvil y cuándo la
+alcanzará? ¿Cuándo y con qué velocidad golpeará el móvil en el suelo?}
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-16}{amb}{*}
+%ENUNCIADO
+{The amount of polluting matter $M$ (given in kg) in a wastewater tank follows this differential equation:
+\[
+\frac{dM}{dt}=-0.5M+1000,
+\]
+where $k$ is a contant, and $t$ is the time (given in days).
+(The factor $-0.5M$ can be explained by the fact that the tank is cleaned continuously,
+at a rate proportional to the amount of polluting substances left.
+On the other hand, the $+1000$ term accounts for new polluting substances entering the tank at a rate of 1000 kg per day.)
+Suppose the initial amount of polluting substances is equal to $10,000$ kg:
+\begin{enumerate}
+\item Find and expression for the amount of polluting matter at any given time $t$.
+\item How much polluting substance will there be in the tank after one week?
+\end{enumerate}
+}
+%SOLUCIÓN
+{\begin{enumerate}
+\item $M(t)=8000e^{-0.5t}+2000$.
+\item $M(7)=2241.579$ kg.
+\end{enumerate}
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-17}{gen}{}
+%ENUNCIADO
+{Si tenemos en cuenta que cualquier onda sonora que atraviesa un medio sufre un proceso de amortiguamiento, y que su
+Intensidad $I$ (cantidad de energía por unidad de área y tiempo que atravesaría una superficie colocada de forma
+perpendicular a la dirección de desplazamiento de la onda, en w/m$^2$) viene dada por la ley de Lamber-Beer:
+\[
+\frac{{dI}}{{dx}} =  - \alpha I
+\]
+donde $\alpha$ es el coeficiente de absorción, y suponemos una onda sonora que llega a una pared con una intensidad de 1 w/m$^2$, y atraviesa 10 cm de pared con un coeficiente de absorción del material de la pared de $0,1$ cm$^-1$. En estas condiciones:
+\begin{enumerate}
+\item ¿Cuál es la intensidad que llega al otro lado de la pared?
+\item Teniendo en cuenta que en ondas sonoras más que la intensidad misma se utiliza el nivel de intensidad $\beta$, cuya unidad es el decibelio, que viene dado por:
+\[
+\beta  = 10\log _{10} \frac{I}{{I_0 }}
+\]
+donde $I_0$ es una intensidad de referencia asociada con la intensidad más débil que se puede oír e igual a $10^{-12}$ W/m$^2$, calcular cuál es el nivel de intensidad de la onda entrante en la pared, y cuál el de la saliente.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-18}{med}{}
+%ENUNCIADO
+{Human plasma is kept at a temperature of 4ºC; however, in order to use it on people it should be heated to the average human body temperature 37ºC.
+It takes 1 hour for the plasma to reach the ideal temperature, when heated in a medical heater at 50ºC.
+How long will it take to reach the ideal temperature if the medical heater is at 60º?
+}
+%SOLUCIÓN
+{For a heater temperature of 50ºC $T(t)=-46e^{-0.02808t}+50$, and for a heater temperature of 60ºC $T(t)=-56e^{-0.02808t}+60$, so it takes $31.69$ min to reach the ideal temperature for the plasma.}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-19}{gen}{}
+%ENUNCIADO
+{Find the equation of all the functions such that, at each point $(x,y)$,
+the slope of the tangent line to the graph of the function is equal to the third power of the
+$x$-component.
+Which one of these functions goes through the origin?
+}
+%SOLUCIÓN
+{$y=x^4/4$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-20}{med}{}
+%ENUNCIADO
+{If a person receives glucose by an intravenous drip, the concentration of glucose $c(t)$ with respect to time follows this differential equation:
+\[
+\frac{dc}{dt}=\frac{G}{100V}-kc.
+\]
+Here $G$ is the (constant) speed at which gluose is given to the patient, $V$ is the total volume of blood in the body, and $k$ is a positive constant that varies with each patient.
+Compute $c(t)$.
+}
+%SOLUCIÓN
+{$c(t)=De^{kt}+\frac{G}{100Vk}$
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-21}{amb}{}
+%ENUNCIADO
+{The room temperature $T$ on a winter day changes with time according to the following conditions:
+\[
+\frac{dT}{dt}=
+\begin{cases}
+40-T, & \mbox{if the building heating is on;} \\
+-T, & \mbox{if the building heating is off.}
+\end{cases}
+\]
+The temperature in a classroom at 9 am is 5ºC, so the keeper turns on the heating.
+Due to some unexpected malfunction, the heating does not work from 11am to noon.
+What will the temperature of the room be at 1pm?
+}
+%SOLUCIÓN
+{From 9 to 11 the temperature function is $T(t)=-35e^{-t}+40$ and the temperature at $11$ is $35.263$ºC.\\
+From 11 to 12 the temperature function is $T(t)=35.263e^{-t}$ and the temperature at $12$ is $12.973$ºC.\\
+From 12 to 13 the temperature function is $T(t)=-27.027e^{-t}+40$ and the temperature at $13$ is $30.057$ºC.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-22}{amb}{}
+%ENUNCIADO
+{Se considera que la población de una determinada ciudad, $P(t)$, con índices constantes de natalidad y mortalidad,
+$\beta$ y $\gamma$ respectivamente, pero en la que también ingresan por inmigración $I$ personas al año, sigue la
+ecuación diferencial:
+\[
+\frac{{dP}} {{dt}} = \left( {\beta  - \gamma } \right)P + I
+\]
+Suponiendo que dicha población tenía $1,5$ millones de habitantes en $1980$, que la diferencia entre los índices de
+natalidad y mortalidad es de $0.01$ (es decir, crece un $1\%$ anual), y también que absorbe $40000$ inmigrantes al año,
+¿cuál será la población en el año $2005$?}
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-23}{qui}{}
+%ENUNCIADO
+{Una reacción química se comporta según la siguiente ecuación diferencial:
+\[
+y\sqrt {2x} \,dy - 2y^2 \,dx = 0
+\]
+donde $y$ es la energía liberada (en Kj) y $x$ es la cantidad de una determinada sustancia (en gr). Sabiendo que para 2
+gr la energía liberada es de 50 Kj, ¿cuánta cantidad habrá que utilizar para obtener 1000 Kj?}
+%SOLUCIÓN
+{$6.12$  gr.
+}
+%RESOLUCIÓN
+{Se trata de una ecuación diferencial ordinaria de variables separables, así que, para resolverla primero separamos las variables
+\[
+y\sqrt {2x} \,dy - 2y^2 \,dx = 0
+\Leftrightarrow
+y\sqrt {2x} \,dy =  2y^2 \,dx
+\Leftrightarrow
+\frac{y}{y^2}dy =  \frac{2}{\sqrt{2x}}dx
+\Leftrightarrow
+\frac{1}{y}dy =  \frac{2}{\sqrt{2x}}dx
+\]
+y ahora integramos ambos miembros de la ecuación
+\begin{align*}
+\int \frac{1}{y}dy &= \ln y +C, \\
+\int \frac{2}{\sqrt{2x}}dx &= 2\sqrt{2x}+C.
+\end{align*}
+Por tanto, la solución general de la ecuación es
+\[
+\ln y = 2\sqrt{2x}+C
+\Leftrightarrow
+y(x) = e^{2\sqrt{2x}+C} = e^{2\sqrt{2x}}e^C = C e^{2\sqrt{2x}},
+\]
+renonbrando $e^C$ como una constante $C$.
+
+Para llegar a una solución particular, imponemos la condición inicial que nos dan, que es $y(2)=50$.
+\[
+y(2) = C e^{2\sqrt{2\cdot 2}} = C e^4 = 50
+\Leftrightarrow
+C = \frac{50}{e^4}
+\]
+Así pues, la solución particular es
+\[
+y(t) = \frac{50}{e^4} e^{2\sqrt{2x}} = 50  e^{2\sqrt{2x}-4}.
+\]
+
+Por último, para ver la masa $x_0$ necesaria para generar 1000 Kj, sustituimos en la solución particular
+\[
+\renewcommand{\arraystretch}{2}
+\begin{array}{c}
+y(x_0) = 50  e^{2\sqrt{2x_0}-4} = 1000
+\Leftrightarrow
+e^{2\sqrt{2x_0}-4} = 	\dfrac{1000}{50} = 20
+\Leftrightarrow \\
+\Leftrightarrow
+2\sqrt{2x_0}-4 = 	\ln 20 = 2.9957
+\Leftrightarrow
+\sqrt{2x_0} = \dfrac{2,9957+4}{2} = 3.4979
+\Leftrightarrow
+x_0 = \dfrac{3,4979 ^2}{2} = 6.12 \mbox{ gr}.
+\end{array}
+\]
+}
+
+
+\newproblem{edosep-24}{gen}{*}
+%ENUNCIADO
+{Resolver el problema del valor inicial
+\[
+\left\{
+  \begin{array}{l}
+    y\sqrt{2x}dy-2y^2dx=0\\
+    y(0)=5
+  \end{array}
+\right.
+\]
+¿Para qué valor de $x$, se obtiene $y=1000$?
+}
+%SOLUCIÓN
+{$y(x) = 5 e^{2\sqrt{2x}}$. El valor de $x$ para el que $y=1000$ es $x=3.509$.
+}
+%RESOLUCIÓN
+{Se trata de una ecuación diferencial ordinaria de variables separables, por lo que, para resolverla primero debemos separar las variables
+\[
+y\sqrt{2x}dy-2y^2dx=0 \Leftrightarrow  y\sqrt{2x}dy = 2y^2dx \Leftrightarrow \frac{y}{y^2}dy = \frac{2}{\sqrt{2x}}dx \Leftrightarrow \frac{1}{y}dy = \sqrt{2}x^{-1/2}dx
+\]
+Una vez separadas las variables integramos ambos lados de la ecuación
+\[
+\int \frac{1}{y}dy = \int \sqrt{2}x^{-1/2}dx \Leftrightarrow \log y = 2\sqrt{2x} +C
+\]
+y despejando $y$  obtenemos la solución general de la ecuación
+\[
+y(x) = e^{2\sqrt{2x}+C} = Ce^{2\sqrt{2x}}.
+\]
+Para obtener la solución particular imponemos la condición inicial $y(0)=5$,
+\[
+y(0) = Ce^{2\sqrt{2\cdot 0}} = 5 \Leftrightarrow C e^{0} = 5 \Leftrightarrow C = 5,
+\]
+de modo que la solución del problema del valor inicial es
+\[
+y(x) = 5 e^{2\sqrt{2x}}.
+\]
+
+Finalmente, calculamos el valor $x$ para el que $y=1000$:
+\[
+y(x) = 5 e^{2\sqrt{2x}} = 1000 \Leftrightarrow e^{2\sqrt{2x}} = \frac{1000}{5}=200 \Leftrightarrow 2\sqrt{2x} = \log 200 \Leftrightarrow x = \frac{(\log 200/2)^2}{2} = 3.509.
+\]
+}
+
+
+\newproblem{edosep-25}{amb}{*}
+%ENUNCIADO
+{La velocidad de aumento del número de bacterias en un cultivo es proporcional al número de bacterias presentes, siguiendo la ecuación:
+\[
+\frac{dx}{dt}=ax
+\]
+siendo $x$ el número de bacterias presentes y $t$ el tiempo.
+\begin{enumerate}
+\item  ¿Por cuánto se habrá multiplicado el número de bacterias al cabo de $5$ horas, si se duplicó al cabo de $3$ horas?
+\item  Si al cabo de $4$ horas hay $10000$ bacterias,  ¿cuántas había al principio?
+\end{enumerate}
+}
+%SOLUCIÓN
+{La solución general de la ecuación es $x(t)=Ce^{at}$.
+\begin{enumerate}
+\item $k=3.17$.
+\item Al principio había $3968$ bacterias.
+\end{enumerate}
+}
+%RESOLUCION
+{Antes de contestar a los apartados resolvemos la ecuación diferencial que plantea el problema. Se trata de una ecuación diferencial de variables separadas que se resuelve fácilmente:
+\[
+\frac{dx}{dt}=ax \Longleftrightarrow \frac{dx}{x}=a\,dt \Longleftrightarrow
+\int \frac{dx}{x} = \int a\,dt \Longleftrightarrow \ln x = at+C \Longleftrightarrow
+e^{\ln x}=e^{at+C},
+\]
+y, aplicando la función exponencial a ambos lados de la última igualdad para simplificar, obtenemos la solución general
+\[
+e^{\ln x}=e^{at+C} \Longleftrightarrow x=e^{at}e^{C} \Longleftrightarrow x=Ce^{at}.
+\]
+donde, para simplificar, hemos reescrito $C=e^C$ al ser una constante.
+\begin{enumerate}
+\item Para resolver el primer apartado, llamamos $x(0)$ al número inicial de bacterias en el cultivo. Como al cabo de 3 horas se había duplicado el número de bacterias en el cultivo, tenemos la ecuación $x(3)=2x(0),$ que al revolverla nos lleva a
+\[
+x(3)=2x(0) \Longleftrightarrow Ce^{3a}=2Ce^{0a}=2C \Longleftrightarrow
+e^{3a}=2 \Longleftrightarrow 3a=\ln 2 \Longleftrightarrow a=\frac{\ln 2}{3}.
+\]
+
+Para saber por cuanto se habrá multiplicado el número de bacterias al cabo de 5 horas, planteamos igual que antes la ecuación $x(5)=kx(0),$ donde $k$ es el factor de multiplicación. Al resolver esta ecuación obtenemos
+\[
+x(5)=kx(0)\Longleftrightarrow Ce^{5\frac{\ln 2}3}=kCe^{0\frac{\ln 2}{3}}=kC \Longleftrightarrow e^{5\frac{\ln 2}{3}}=k \Longleftrightarrow k=3.17.
+\]
+Luego al cabo de 5 horas habrá aproximadamente tres veces más bacterias que al comienzo
+
+\item El número de inicial de bacterias es
+\[
+x(0)=Ce^{0\frac{\ln 2}3}=C.
+\]
+
+Ahora bien, como al cabo de 4 horas había 1000 bacterias, planteamos la ecuación $x(4)=10000$, que al resolverla, nos proporciona el valor de $%
+C.$
+\[
+x(4)=Ce^{4\frac{\ln 2}{3}}=10000 \Longleftrightarrow C=\frac{10000}{e^{4\frac{\ln 2}3}} = 3968.5.
+\]
+\end{enumerate}
+}
+
+
+\newproblem{edosep-26}{gen}{*}
+%ENUNCIADO
+{Dada la ecuación diferencial: $yy'+ e^{x^2}x = 2xy^2e^{x^2}$, calcular el valor de $y(1)$ sabiendo que $y(0)=-1$.}
+%SOLUCIÓN
+{$y(1)=4.005$.}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-27}{gen}{*}
+%ENUNCIADO
+{Two items made of the same ceramic material are heated in an oven
+at $1000$ºC.
+The first item is at $40^\circ$C, when was put in the oven, while the second was at $5$ºC.
+After one minute, the temperature of the first item has gone up to $200$ºC.
+Compute the temperature of both items five minutes after they were put into the oven.
+}
+%SOLUCIÓN
+{The tempearature of the first item is $T(t)=1000-960e^{-0.1823t}$ and after 5 min is $614.1559$ºC.\\
+The tempearature of the second item is $T(t)=1000-995e^{-0.1823t}$ and after 5 min is $600.0887$ºC.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{edosep-28}{qui}{*}
+%ENUNCIADO
+{El átomo de radio se desintegra dando helio y una emanación gaseosa, radón, que también es radioactiva.
+Sabiendo que la velocidad de desintegración es proporcional a la masa ($m$) en cada instante, se pide:
+\begin{enumerate}
+\item Resolver la ecuación diferencial que explica la desintegración del radio.
+\item Calcular la constante de desintegración sabiendo que la masa del radio disminuye un $0.043\%$ cada año.
+\item Calcular el periodo del radio, que es el instante $T$ tal que  $m(t+T)=\frac{1}{2}m(t)$ $\forall t\geq 0$.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-29}{gen}{*}
+%ENUNCIADO
+{Find the equation of the function that goes through the point $P=(1,1)$, and such that the slope of the tangent line to the graph of the function at every point of the graph is equal to the square of the $y$-coordinate at the point.
+}
+%SOLUCIÓN
+{$y=\frac{-1}{x-2}$.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-30}{med}{*}
+%ENUNCIADO
+{Un investigador constata que, tras una inyección intravenosa de glucosa, la tasa de glucosa en sangre $g(t)$ en cada instante $t$ sigue la ecuación diferencial
+\[
+g'+kg=0,
+\]
+donde $k>0$ es una constante conocida como \emph{coeficiente de asimilación}. Se pide:
+\begin{enumerate}
+\item Resolver la ecuación diferencial para un sujeto cuya tasa de glucosa en el instante de aplicar la inyección es 80 mg/dl.
+\item Si el valor del coeficiente de asimilación varía de $1.06\cdot 10^{-2}$ a $2.42\cdot 10^{-2}$ en los sujetos normales, estudiar si los resultados del sujeto anterior son normales tiendo en cuenta que a los 30 minutos la tasa de glucosa era de $1.2$ mg/dl.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem*{edosep-31}{gen}{*}
+%ENUNCIADO
+{Carbon present in living organism contains an extremely small portion of the radioactive isotope $C^{12}$, which come from the cosmic rays present on the upper most part of the atmosphere.
+While the organism is alive, the proportion of the carbon $C^{14}$ within the total amount of carbon in the body is kept constant by means of complex, natural processes.
+After death, these processes stop, and the radioactive carbon loses 1/8000 of its mass per year.
+Using this fact one can compute the age at which an organism died.
+\begin{enumerate}
+\item Suppose that an analysis of the bones of a Neanderthal man shows that the proportion of $C^{14}$ was 6.24\% of what it would have been if he were alive; find how long ago this person died.
+\item Find the half-life of $C^{14}$.
+\end{enumerate}
+}
+%SOLUCIÓN
+{
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-32}{amb}{}
+%ENUNCIADO
+{A school of 1000 salmons has a peaceful life near the cost.
+The birth rate is 2\% per day, while the mortality rate is 1\%.
+Suddenly ony day a shark makes its appearance among the fish, and start eating them at a rate
+of 15 salmons per day.
+How long will it take for the shark to finish the school of salmos?
+}
+%SOLUCIÓN
+{Approximately 110 days.
+}
+%RESOLUCIÓN
+{}
+
+
+\newproblem{edosep-33}{far}{*}
+%ENUNCIADO
+{El número de bacterias en un determinado cultivo crece a una velocidad proporcional al número de bacterias presente.
+Al cabo de dos días, el número de bacterias se ha duplicado y un día más tarde había 1000 bacterias.
+¿Cuántas bacterias había al principio?
+}
+%SOLUCIÓN
+{353.55 bacterias.
+}
+%RESOLUCIÓN
+{}
