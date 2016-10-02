@@ -1,0 +1,554 @@
+% Autor: Alfredo Sánchez Alberca (asalber@ceu.es)
+
+\newproblem{derimp-1}{gen}{}
+%STATEMENT
+{In the following expressions, compute the derivative of $y$ as a function of $x$ using implicit differentiation techniques.
+\begin{multicols}{2}
+\begin{enumerate}
+\item $x^3-3xy^2+y^3=1$.
+\item $y=\dfrac{\sin(x+y)}{x^2+y^2}$.
+\end{enumerate}
+\end{multicols}
+}
+%SOLUTION
+{\begin{enumerate}
+\item $\frac{dy}{dx}=\frac{-x^2+y^2}{-2xy+y^2}.$
+\item $\frac{dy}{dx}=\frac{-2xy+\cos(x+y)}{(x^2+y^2)+2y^2-\cos(x+y)}.$
+\end{enumerate}
+}
+%RESOLUTION
+{
+}
+
+
+\newproblem{derimp-2}{gen}{*}
+%STATEMENT
+{Compute the equations of the tangent and normal lines, at the point $x=0$, to the graph of the function $y$, given by $xy+e^x-\log y=0$.
+}
+%SOLUTION
+{Tangent: $y=(e^2+e)x+e$. Normal: $y=\frac{-x}{e^2+e}+e$.
+}
+%RESOLUTION
+{
+}
+
+
+\newproblem{derimp-3}{qui}{*}
+%STATEMENT
+{The temperature $T$ and the volume $V$ of a gas kept in a closed container of variable volume are related by the following formula,
+where $T$ is given in Celsius degrees and $V$ in cubic meters:
+\[
+T^2(V^2-\pi^2)-V\cos(TV)=0
+\]
+\begin{enumerate}
+\item Compute the derivative of the volume with respect to the temperature when the volume is equal to $\pi$ m$^3$ and the temperature
+is equal to half Celsius degree.
+\item Compute an equation of the line tangent to the graph of the volume, as a function of the temperature, in the point of part (a).
+\item If we assume that temperature and volume are both functions of the pressure, find the equation that would relate the derivative of the
+temperature (with respect to pressure) with the derivative of the volume (with respect to pressure).
+\end{enumerate}
+}
+%SOLUTION
+{\begin{enumerate}
+\item $\frac{dV}{dT} = \frac{-2T(V^2-\pi^2)-V^2\sen(TV)}{2T^2V-\cos(TV)+TV\sen(TV)}$ and $\frac{dV}{dT}(V=\pi,T=0.5)= -\pi$ m$^3$/ºC.
+\item Tangent: $V=\pi(-T+1.5)$.
+\item $2T\frac{dT}{dP}(V^2-\pi^2)+T^2(2V\frac{dV}{dT})-\frac{dV}{dT}\cos(VT)-V(-\sen(TV)(\frac{dT}{dP}V+T\frac{dV}{dP})) =0$.
+\end{enumerate}
+}
+%RESOLUTION
+{
+}
+
+
+\newproblem*{derimp-4}{gen}{*}
+%STATEMENT
+{Dada la función:
+\[
+\frac{x}{{y^2 }} + e^{x^2 y}  - \log \sqrt {x - y}  = 0
+\]
+Calcular las ecuaciones de las rectas tangente y normal a su gráfica en el punto de abcisa $x=0$.
+}
+
+
+\newproblem{derimp-5}{gen}{*}
+%STATEMENT
+{Un cuerpo se mueve en el plano a través de los puntos de coordenadas $(x,y)$ relacionadas mediante la siguiente expresión:
+\[
+2e^{xy} \sen x + y\cos x = 2
+\]
+Se pide:
+\begin{enumerate}
+\item Calcular su posición cuando $x=\pi/2$
+\item Calcular la ecuación de la recta tangente a la gráfica de la función cuando $x=0$.
+\end{enumerate}
+}
+%SOLUTION
+{
+\begin{enumerate}
+\item $x_0=\pi/2$, $y_0 = 0$.
+\item $ y=-2x+2$.
+\end{enumerate}
+}
+%RESOLUTION
+{\begin{enumerate}
+\item El punto $(x_0,y_0)$ en el que se encontrará el cuerpo cuando $x_0=\pi/2$
+cumple la ecuación del enunciado. Por lo tanto:
+\[
+2e^{x_0y_0} \sen x_0 + y_0\cos x_0 = 2
+\]
+y sustituyendo $x_0=\pi/2$, obtenemos:
+\[
+2e^{\frac{\pi }{2}y_0 } \sen\frac{\pi }{2} + y_0 \cos \frac{\pi }{2}
+= 2 \Rightarrow 2e^{\frac{\pi }{2}y_0 }  = 2
+\]
+con lo cual:
+\[
+e^{\frac{\pi }{2}y_0 }  = 1 \Leftrightarrow y_0  = 0
+\]
+
+\item Sabemos que la ecuación de la recta tangente a la gráfica de
+la función en el punto de coordenadas $(x_0,y_0)$ es:
+\[
+y-y_0=f'(x_0)(x-x_0)
+\]
+En nuestro caso, no tenemos la expresión explícita de la función
+$f$, pero sí que tenemos la expresión de partida que define a $y$
+como función de $x$ de forma implícita. Suponiendo que $y$ es
+función de $x$ y derivando con respecto a $x$, obtenemos:
+\[
+2 e^{xy}(y + xy')\sen x + 2e^{xy}\cos x + y'\cos x - y\sen x = 0
+\]
+Y sacando como factor común $y'$ y despejando, nos queda:
+\[
+y' = \frac{{ - 2e^{xy} y \sen x - 2e^{xy} \cos x + y \sen
+x}}{{2xe^{xy} \sen x + \cos x}}
+\]
+Teniendo en cuenta que $x_0=0$, y sustituyendo en la expresión
+inicial, obtenemos el valor de $y_0$:
+\[
+2e^0 \sen 0 + y_0 \cos 0 = 2 \Rightarrow y_0  = 2
+\]
+Y teniendo en cuenta el valor de la derivada implícita obtenido
+anteriormente:
+\[
+f'(0) = y'(0,2) = \frac{{ - 2e^0 \cos 0}}{{\cos 0}} =  - 2
+\]
+Por lo tanto, la ecuación de la recta tangente es:
+\[
+y-2=-2(x-0)\Leftrightarrow y=-2x+2
+\]
+\end{enumerate}
+}
+
+
+\newproblem{derimp-6}{gen}{*}
+%STATEMENT
+{Hallar la ecuación de la recta tangente y normal a la curva $x^2+y^2=3xy-1$ en los puntos en que $x=1$. Calcular también los extremos relativos y decir si son máximos o mínimos.
+}
+%SOLUTION
+{Recta tangente en el punto $(1,1)$: $y= 2-x$. Recta normal en el punto $(1,1)$: $y=x$.
+
+Recta tangente en el punto $(1,2)$: $y= 4x-2$. Recta normal en el punto $(1,2)$: $y=\frac{9-x}{4}$.
+
+Hay un mínimo relativo en el punto $(3/\sqrt{5},2/\sqrt{5})$ y un máximo relativo en $(-3/\sqrt{5},-2/\sqrt{5})$.
+}
+%RESOLUTION
+{Consideremos $y$ como función de $x$. Veamos primero los puntos de la curva en los que $x=1$:
+\[
+1^{2}+y^{2} = 3\cdot 1\cdot y-1 \Leftrightarrow y^{2} -3y+2 = 0.
+\]
+Resolviendo la ecuación obtenemos dos soluciones $y=1$ e $y=2$, de modo que existen dos puntos para los que $x=1$, que son el $(1,1)$ y el $(1,2)$.
+
+Para calcular las ecuaciones de las rectas tangente y normal en estos puntos, necesitamos calcular la derivada $dy/dx$ en dichos puntos. Derivamos implicitamente:
+\[
+d(x^{2}+y^{2} = d(3xy-1) \Leftrightarrow 2xdx+2ydy = 3(dxy+xdy) \Leftrightarrow (2x-3y)dx+(2y-3x)dy = 0,
+\]
+de donde se deduce
+\[
+\frac{dy}{dx} = \frac{3y-2x}{2y-3x},
+\]
+que en el punto $(1,1)$ vale
+\[
+\frac{dy}{dx} = \frac{3\cdot 1 - 2\cdot 1}{2\cdot 1-3\cdot 1} = -1,
+\]
+y en el punto $(1,2)$ vale
+\[
+\frac{dy}{dx} = \frac{3\cdot 2 - 2\cdot 1}{2\cdot 2-3\cdot 1} = 4.
+\]
+Así pues, la ecuación de la recta tangente en el punto $(1,1)$ es
+\[
+y-1 = \frac{dy}{dx}(1,1)(x-1) \Leftrightarrow y= 2-x,
+\]
+y la ecuación de la recta normal es
+\[
+y-1 = -\frac{1}{dy/dx}(1,1)(x-1) \Leftrightarrow y= x,
+\]
+mientras que la ecuación de la recta tangente en el punto $(1,2)$ es \[
+y-2 = \frac{dy}{dx}(1,2)(x-1) \Leftrightarrow y= 4x-2,
+\]
+y la ecuación de la recta normal es
+\[
+y-2 = -\frac{1}{dy/dx}(1,2)(x-1) \Leftrightarrow y=\frac{9-x}{4}.
+\]
+
+Por otro lado, para calcular los extremos relativos, primero calculamos los puntos críticos, que son los que anulan la primera derivada:
+\[
+\frac{dy}{dx}=\frac{3y-2x}{2y-3x}=0 \Leftrightarrow 3y-2x=0 \Leftrightarrow y=2x/3.
+\]
+Pero además deben pertenecer a la curva de la función, y por tanto deben satisfacer la ecuación de la función:
+\[
+x^{2}+(2x/3)^{2}=3x(2x/3)-1 \Leftrightarrow x^{2}+4x^{2}/9 = 2x^{2}-1 \Leftrightarrow x^{2}=9/5 \Leftrightarrow x=\pm 3/\sqrt{5}.
+\]
+Así pues, existen dos puntos críticos que son el $(3/\sqrt{5},2/\sqrt{5})$ y $(-3/\sqrt{5},-2/\sqrt{5})$. Para ver si son puntos de máximo o mínimo relativos, necesitamos calcular la segunda derivada en dichos puntos:
+\[
+\frac{d^{2}y}{dx^{2}}= \frac{d}{dx}\left(\frac{3y-2x}{2y-3x}\right) = \frac{(3\frac{dy}{dx}-2)(2y-3x)-(2\frac{dy}{dx}-3)(3y-2x)}{(2y-3x)^{2}}.
+\]
+En el punto, $(3/\sqrt{5},2/\sqrt{5})$ la segunda derivada vale
+\[
+\frac{d^{2}y}{dx^{2}}(3/\sqrt{5},2/\sqrt{5})=
+\frac{(3\cdot 0-2)(2\frac{2}{\sqrt{5}}-3\frac{3}{\sqrt{5}})-(2\cdot 0-3)(3\frac{2}{\sqrt{5}}-2\frac{3}{\sqrt{5}})}{(2\frac{2}{\sqrt{5}}-3\frac{3}{\sqrt{5}})^{2}} = 2\sqrt{5},
+\]
+que al ser positiva, indica que el punto $(3/\sqrt{5},2/\sqrt{5})$ es un punto de mínimo relativo.
+
+En el punto, $(-3/\sqrt{5},-2/\sqrt{5})$ la segunda derivada vale
+\[
+\frac{d^{2}y}{dx^{2}}(-3/\sqrt{5},-2/\sqrt{5})=
+\frac{(3\cdot 0-2)(2\frac{-2}{\sqrt{5}}-3\frac{-3}{\sqrt{5}})-(2\cdot 0-3)(3\frac{-2}{\sqrt{5}}-2\frac{-3}{\sqrt{5}})}{(2\frac{-2}{\sqrt{5}}-3\frac{--3}{\sqrt{5}})^{2}} = -2\sqrt{5},
+\]
+que al ser negativa, indica que el punto $(-3/\sqrt{5},-2/\sqrt{5})$ es un punto de máximo relativo.
+}
+
+
+\newproblem{derimp-7}{gen}{*}
+%STATEMENT
+{Dada  la curva $x^2-xy+y^2=3$
+\begin{enumerate}
+\item Calcular los posibles extremos relativos de $y$, considerando $y$ como función implícita de $x$. ¿En qué puntos se alcanzan dichos valores?
+\item Analizar si lo puntos anteriores son máximos o mínimos haciendo uso de la derivada segunda.
+\end{enumerate}
+}
+%SOLUTION
+{\begin{enumerate}
+\item Los puntos donde se anula la derivada son $(1,2)$ y $(-1,-2)$.
+\item En $(1,2)$ hay un máximo y en $(-1,-2)$ un mínimo.
+\end{enumerate}
+}
+%RESOLUTION
+{\begin{enumerate}
+\item Derivamos implícitamente la ecuación
+\[
+\frac{d}{dx}(x^2-xy+y^2)=\frac{d}{dx}3=0
+\]
+Derivando el lado izquierdo tenemos
+\begin{align*}
+\frac{d}{dx}(x^2-xy+y^2)&=
+\frac{d}{dx}(x^2)-\frac{d}{dx}(xy)+\frac{d}{dx}(y^2)=
+2x-(\frac{dx}{dx}y+x\frac{dy}{dx})+2y\frac{dy}{dx}=\\
+&=2x-y-x\frac{dy}{dx}+2y\frac{dy}{dx}
+=2x-y+(2y-x)\frac{dy}{dx}=0
+\end{align*}
+Los posibles extremos serán los puntos donde se anule la derivada, es decir, $\dfrac{dy}{dx}=0$. Sustituyendo en la ecuación anterior tenemos
+\[
+2x-y+(2y-x)\cdot 0= 2x-y=0 \Leftrightarrow y=2x.
+\]
+Y sustituyendo ahora en la ecuación de la función tenemos
+\[
+x^2-x\cdot 2x+(2x)^2=3 \Leftrightarrow x^2-2x^2+4x^2=3 \Leftrightarrow 3x^2=3 \Leftrightarrow x=\pm1.
+\]
+Por tanto, los posibles puntos de extremo serán (1,2) y (-1,-2).
+
+\item Para ver si los puntos anteriores son efectivamente extremos, calculamos la derivada segunda en dichos puntos.
+\begin{align*}
+\frac{d^2}{dx^2}(x^2-xy+y^2)&=
+\frac{d}{dx}\left(\frac{d}{dx}(x^2-xy+y^2)\right)=\\
+&=\frac{d}{dx}\left(2x-y+(2y-x)\frac{dy}{dx}\right)=\\
+&=\frac{d}{dx}(2x)-\frac{d}{dx}y+\left(\frac{d}{dx}(2y-x)\frac{dy}{dx}+(2y-x)\frac{d}{dx}\frac{dy}{dx}\right)=\\
+&=2-\frac{dy}{dx}+\left(2\frac{dy}{dx}-\frac{dx}{dx}\right)\frac{dy}{dx}+(2y-x)\frac{d^2y}{dx^2}=\\
+&= 2-\frac{dy}{dx}+2\frac{d^2y}{dx^2}-\frac{dy}{dx}+(2y-x)\frac{d^2y}{dx^2}=
+2-2\frac{dy}{dx}+(2y-x+2)\frac{d^2y}{dx^2}=0
+\end{align*}
+Para el primer punto tenemos que sustituir $x=1$, $y=2$ y $\dfrac{dy}{dx}=0$, y queda
+\[
+2-2\cdot 0+(2\cdot 2-1+2)\frac{d^2y}{dx^2}=0 \Leftrightarrow 2+5\frac{d^2y}{dx^2}=0 \Leftrightarrow \frac{d^2y}{dx^2}=\frac{-2}{5},
+\]
+que al ser negativo indica que el en el punto $(1,2)$ hay un máximo.
+
+Para el segundo punto tenemos que sustituir $x=-1$, $y=-2$ y $\dfrac{dy}{dx}=0$, y queda
+\[
+2-2\cdot 0+(2\cdot (-2)-(-1)1+2)\frac{d^2y}{dx^2}=0 \Leftrightarrow 2-\frac{d^2y}{dx^2}=0 \Leftrightarrow \frac{d^2y}{dx^2}=2,
+\]
+que al ser positivo indica que el en el punto $(-1,-2)$ hay un mínimo.
+\end{enumerate}
+}
+
+
+\newproblem{derimp-8}{gen}{}
+%STATEMENT
+{Caldular $dy/dx$ y $dx/dy$ para las siguientes funciones implícitas:
+\begin{enumerate}
+\item $2x^2+3y^3-x^y= 2$
+\item $3x^2y^2 = x^2 + 3y^3$
+\item $\sen (xy^2) = \cos(x^2y)$
+\item $x \ln (x^2+3y)  = y^3e^{2xy^2}$
+\end{enumerate}
+}
+%SOLUTION
+{\begin{enumerate}
+\item $\frac{dy}{dx} = \frac{4x-yx^{y-1}}{-9y^2+x^y\log_x e}$ y $\frac{dx}{dy} = \frac{-9y^2+x^y\log_x e}{4x-yx^{y-1}}$.
+\item $\frac{dy}{dx} = \frac{6xy^2-2x}{9y^2-6x^2y}$ y $\frac{dx}{dy} = \frac{9y^2-6x^2y}{6xy^2-2x}$.
+\item $\frac{dy}{dx} = \frac{y^2\cos(xy^2)+2xy\sen(x^2y)}{-2xy\cos(xy^2)-x^2\sen(x^2y)}$ y $\frac{dx}{dy} = \frac{-2xy\cos(xy^2)-x^2\sen(x^2y)}{y^2\cos(xy^2)+2xy\sen(x^2y)}$.
+\item $\frac{dy}{dx} = \frac{\ln(x^2+3y)+\frac{2x^2}{x^2+3y}-2y^5e^{2xy^2}}{-\frac{3x}{x^2+3y}3y^2e^{2xy^2}+4xy^4e^{2xy^2}}$ y $\frac{dx}{dy} = \frac{-\frac{3x}{x^2+3y}3y^2e^{2xy^2}+4xy^4e^{2xy^2}}{\ln(x^2+3y)+\frac{2x^2}{x^2+3y}-2y^5e^{2xy^2}}$.
+\end{enumerate}
+}
+%RESOLUTION
+{
+}
+
+
+\newproblem*{derimp-9}{gen}{}
+%STATEMENT
+{Caldular $dy/dx$ para las siguientes funciones definidas implícitamente:
+\begin{enumerate}
+\item  $xy^{3}-3x^{2}=xy+5.$
+\item  $e^{xy}+y\log x=\cos 2x.$
+\end{enumerate}
+}
+
+
+\newproblem*{derimp-10}{gen}{*}
+%STATEMENT
+{La expresión
+\[
+e^{xy}\log \left( \dfrac{1}{x}\right) +a\dfrac{1}{y}=2,
+\]
+donde $a$ es una constante, define a $y$ como función implícita de $x $ en el punto $\left( x_{0},y_{0}\right) =\left( 1,1\right) .$
+Calcular la derivada de $y$ con respecto a $x$ en dicho punto.
+}
+
+\newproblem{derimp-11}{gen}{*}
+%STATEMENT
+{La concentración de un fármaco en sangre, $C$ en mg/dl, y el tiempo, $t$ en s,
+están relacionados mediante la expresión:
+\[
+e^{tC}-t^2C^3-\ln{C}=0
+\]
+Suponiendo que la ecuación anterior define a $C$ como función implícita de $t$, y que, por lo tanto, también puede
+definir a $t$ como función implícita de $C$, calcular:
+\begin{enumerate}
+\item La derivada de $C$ con respecto a $t$.
+\item La ecuación de la recta tangente a la gráfica de $C$ en función de $t$ cuando $t=0$.
+\item La ecuación de la recta normal a la gráfica de $t$ en función de $C$ cuando $C=e$.
+\end{enumerate}
+}
+%SOLUTION
+{
+\begin{enumerate}
+\item $\displaystyle
+\dfrac{dC}{dt}=\dfrac{2tC^4-e^{tC}C^2}{e^{tC}tC-3t^2C^3-1}$.
+\item $C=e+e^2 t$.
+\item $t=-e^2(C-e)$.
+\end{enumerate}
+}
+%RESOLUTION
+{\begin{enumerate}
+\item Derivamos implícitamente:
+\[
+\renewcommand{\arraystretch}{2}
+\begin{array}{c}
+d(e^{tC}-t^2C^3-\ln{C})=d0 \Leftrightarrow\\
+\Leftrightarrow d(e^{tC})-d(t^2C^3)-d\ln{C}= 0 \Leftrightarrow\\
+\Leftrightarrow e^{tC}d(tC)-(d(t^2)C^3+t^2d(C^3))-\dfrac{1}{C}dC= 0 \Leftrightarrow\\
+\Leftrightarrow e^{tC}(dtC+tdC)-2tdtC^3-t^23C^2dC-\dfrac{1}{C}dC= 0 \Leftrightarrow\\
+\Leftrightarrow e^{tC}Cdt+e^{tC}tdC-2tC^3dt-3t^2C^2dC-\dfrac{1}{C}dC= 0 \Leftrightarrow\\
+\Leftrightarrow e^{tC}C^2dt+e^{tC}tCdC-2tC^4dt-3t^2C^3dC-dC= 0 \Leftrightarrow\\
+\Leftrightarrow (e^{tC}C^2-2tC^4)dt+(e^{tC}tC-3t^2C^3-1)dC= 0 \Leftrightarrow\\
+\Leftrightarrow (e^{tC}tC-3t^2C^3-1)dC= (2tC^4-e^{tC}C^2)dt \Leftrightarrow\\
+\Leftrightarrow \dfrac{dC}{dt}=\dfrac{2tC^4-e^{tC}C^2}{e^{tC}tC-3t^2C^3-1}.
+\end{array}
+\]
+
+\item En primer lugar veamos qué valores de $C$ corresponden a $t=0$. Sustituyendo en la ecuación que define la función tenemos:
+\[
+e^{0\cdot C}-0^2C^3-\ln C = 0 \Leftrightarrow 1-\ln C = 0 \Leftrightarrow \ln C = 1 \Leftrightarrow C = e.
+\]
+Así pues, se trata de calcular la ecuación de la recta tangente en el punto $(t=0, C=e)$. La ecuación de la recta tangente es
+\[
+C = e+\dfrac{dC}{dt}(t=0,C=e)(t-0)
+\]
+Utilizando la derivada calculada en el apartado anterior tenemos
+\[
+\dfrac{dC}{dt}(t=0,C=e)=\dfrac{2\cdot 0\cdot e^4-e^{0\cdot e}e^2}{e^{0\cdot e}\cdot 0\cdot e-3\cdot 0^2\cdot e^3-1} = \dfrac{-e^2}{-1} = e^2,
+\]
+y sustituyendo en la ecuación de la tangente llegamos a
+\[
+C= e+e^2 t.
+\]
+
+\item Del apartado anterior se deduce que el valor de $t$ que le corresponde a $C=e$ según la función es $t=0$, es decir, se trata de calcular la recta normal en el mismo punto del apartado anterior pero considerando a $t$ como función de $C$. La ecuación de la recta normal es
+\[
+t = 0-\dfrac{1}{dt/dC}(t=0,C=e)(C-e) = -\dfrac{dC}{dt}(t=0,C=e)(C-e),
+\]
+y como la derivada ya la tenemos del apartado anterior, simplemente sustituimos y tenemos
+\[
+t= -e^2(C-e).
+\]
+\end{enumerate}
+}
+
+
+\newproblem{derimp-12}{gen}{*}
+{Calcular las ecuaciones de las tangentes a la curva definida por
+\[
+\tg(xy) -\cos\left(\frac{x}{y}\right) +\frac{x}{y^2} = \log (x^2+y^2)
+\]
+en los puntos de abscisa $x=0$.
+}
+%SOLUTION
+{Ecuación de la recta tangente en $(0,-\sqrt{e^{-1}})$: $y = -\sqrt{e^{-1}} + \frac{1-e\sqrt{e}}{2e} x$.\\
+Ecuación de la recta tangente en el punto  $(0,\sqrt{e^{-1}})$: $y = \sqrt{e^{-1}} + \frac{1+e\sqrt{e}}{2e} x$.
+}
+%RESOLUTION
+{En primer lugar hay que calcular los puntos de la función en los que $x=0$, es decir los puntos donde la función corta el eje de ordenadas. Sustituyendo $x$ por 0 en la ecuación que define la función tenemos
+\[
+\tg(0) -\cos 0 + 0 = \log (y^2) \Leftrightarrow \log(y^2) = -1
+\Leftrightarrow y^2 = e^{-1} \Leftrightarrow y=\pm \sqrt{e^{-1}}
+\]
+Así pues, hay dos puntos en los que hay que calcular las tangentes que son
+$(0,-\sqrt{e^{-1}})$ y $(0,\sqrt{e^{-1}})$.
+
+La ecuación de la recta tangente en $(0,-\sqrt{e^{-1}})$ es
+\begin{equation}
+y = -\sqrt{e^{-1}} + \frac{dy}{dx}(0,-\sqrt{e^{-1}})(x-0),
+\end{equation}
+y por tanto necesitamos calcular la derivada $\dfrac{dy}{dx}$. Para ello derivamos implícitamente:
+\[
+\renewcommand{\arraystretch}{2.5}
+\begin{array}{c}
+\displaystyle
+d\left(\tg(xy)-\cos\left( \frac{x}{y}\right)+\frac{x}{y^2}\right) = d\left( \log (x^2+y^2)\right) \Leftrightarrow \\ \displaystyle
+\Leftrightarrow
+d\tg(xy)-d\cos\left(\frac{x}{y}\right)+d\left( \frac{x}{y^2}\right)=
+\frac{1}{x^2+y^2}d(x^2+y^2) \Leftrightarrow \\ \displaystyle
+\Leftrightarrow
+(1+\tg^2(xy))d(xy)+\sen\left( \frac{x}{y}\right)d\left( \frac{x}{y}\right) +\frac{dxy^2-xdy^2}{y^4} =
+\frac{1}{x^2+y^2}(dx^2+dy^2) \Leftrightarrow \\ \displaystyle
+\Leftrightarrow
+(1+\tg^2(xy))(dxy+xdy)+\sen\left( \frac{x}{y}\right) \frac{dxy-xdy}{y^2}+\frac{dxy^2-x2ydy}{y^4} =
+\frac{1}{x^2+y^2}(2xdx+2ydy) \Leftrightarrow \\ \displaystyle
+\Leftrightarrow
+(1+\tg^2(xy))(dxy+xdy)+\sen\left(\frac{x}{y}\right)\frac{dxy-xdy}{y^2}+\frac{dxy-2xdy}{y^3} =
+\frac{2xdx+2ydy}{x^2+y^2}
+\end{array}
+\]
+La derivada en el punto $(0,-\sqrt{e^{-1}})$ es
+\[
+\renewcommand{\arraystretch}{2.5}
+\begin{array}{c}\displaystyle
+(1+\tg^2(0\cdot
+(-\sqrt{e^{-1}})))(dx(-\sqrt{e^{-1}})+0dy)+\sen\left(\frac{0}{-\sqrt{e^{-1}}}\right)\frac{dx(-\sqrt{e^{-1}})-0dy}{e^{-1}}+\frac{dx(-\sqrt{e^{-1}})-2\cdot 0dy}{(-\sqrt{e^{-1}})^3} =\\
+\displaystyle
+= \frac{2\cdot 0dx+2\cdot (-\sqrt{e^{-1}})dy}{0^2+(-\sqrt{e^{-1}})^2}
+\Leftrightarrow\\ \displaystyle
+\Leftrightarrow -\sqrt{e^{-1}}dx+\frac{-\sqrt{e^{-1}}dx}{(-\sqrt{e^{-1}})^3} = \frac{-2\sqrt{e^{-1}}dy}{e^{-1}} \Leftrightarrow\\ \displaystyle
+\Leftrightarrow -\sqrt{e^{-1}}dx+\frac{dx}{e^{-1}} =
+-2\sqrt{e}dy \Leftrightarrow\\ \displaystyle
+\Leftrightarrow -\sqrt{e^{-1}}dx+edx = -2\sqrt{e}dy \Leftrightarrow\\
+\displaystyle \Leftrightarrow (e-\sqrt{e^{-1}})dx = -2\sqrt{e}dy
+\Leftrightarrow\\
+\displaystyle \Leftrightarrow \frac{dy}{dx} =
+\frac{e-\sqrt{e^{-1}}}{-2\sqrt{e}} = \frac{1-e\sqrt{e}}{2e}.
+\end{array}
+\]
+y sustituyendo en la ecuación anterior tenemos que la tangente en el punto  $(0,-\sqrt{e^{-1}})$ es
+\[
+y = -\sqrt{e^{-1}} + \frac{1-e\sqrt{e}}{2e} x,
+\]
+
+Del mismo modo, la derivada en el punto $(0,-\sqrt{e^{-1}})$ es
+\[
+\renewcommand{\arraystretch}{2.5}
+\begin{array}{c} \displaystyle
+(1+\tg^2(0\cdot \sqrt{e^{-1}}))(dx\sqrt{e^{-1}}+0dy)+\sen\left(\frac{0}{\sqrt{e^{-1}}}\right)\frac{dx\sqrt{e^{-1}}-0dy}{e^{-1}}+\frac{dx\sqrt{e^{-1}}-2\cdot 0dy}{\sqrt{e^{-1}}^3}= \\ \displaystyle
+= \frac{2\cdot 0dx+2\cdot\sqrt{e^{-1}}dy}{0^2+\sqrt{e^{-1}}^2} \Leftrightarrow\\ \displaystyle
+\Leftrightarrow \sqrt{e^{-1}}dx+\frac{\sqrt{e^{-1}}dx}{\sqrt{e^{-1}}^3} =
+\frac{2\sqrt{e^{-1}}dy}{e^{-1}} \Leftrightarrow\\ \displaystyle
+\Leftrightarrow \sqrt{e^{-1}}dx+\frac{dx}{e^{-1}} =
+2\sqrt{e}dy \Leftrightarrow\\ \displaystyle
+\Leftrightarrow \sqrt{e^{-1}}dx+edx = 2\sqrt{e}dy \Leftrightarrow\\ \displaystyle
+\Leftrightarrow (e+\sqrt{e^{-1}})dx = 2\sqrt{e}dy \Leftrightarrow\\ \displaystyle
+\Leftrightarrow \frac{dy}{dx} = \frac{e+\sqrt{e^{-1}}}{2\sqrt{e}} = \frac{1+e\sqrt{e}}{2e}.
+\end{array}
+\]
+y la ecuación de la tangente en el punto  $(0,\sqrt{e^{-1}})$ es
+\[
+y = \sqrt{e^{-1}} + \frac{1+e\sqrt{e}}{2e} x,
+\]
+}
+
+
+\newproblem{derimp-13}{gen}{}
+%STATEMENT
+{Compute the equations of the tangent and normal lines to the curve $C$ at the point $P$ given below:
+\begin{enumerate}
+\item $\displaystyle C:\frac{x^2}{9}-\frac{y^2}{4}=1$, $P=(-3,0)$.
+\item $C:x^3-y^5+xy^2 = 8$, $P=(2,0)$.
+\item $C:x=y^2$, $P=(0,0)$.
+\item $C:x^{2/3}+y^{2/3}=1$, $P=(\sqrt2/4,\sqrt2/4)$.
+\end{enumerate}
+}
+%SOLUTION
+{\begin{enumerate}
+\item Tangent $x=-3$ and normal $y=0$.
+\item Tangent $x=2$ and normal $y=0$.
+\item Tangent $x=0$ and normal $y=0$.
+\item Tangent $y=-x+\sqrt{2}/2$ and normal $y=x$.
+\end{enumerate}
+}
+%RESOLUTION
+{
+}
+
+
+\newproblem{derimp-14}{gen}{}
+%STATEMENT
+{On each of the following cases below, find the equation of the tangent plane and the normal line to the surface $S$ at the given point
+$P$:
+\begin{enumerate}
+\item $S:x-y+z=1$, $P=(0,0,1)$.
+\item $S:x^2+y^2+z^2=1$, $P=(0,1,0)$.
+\item $S:z=\log(x^2+y^2)$, $P=(1,0,0)$.
+\item $S:z=e^{-(x^2+y^2)}$, $P=(0,0,1)$.
+\item $S:z=e^{x+y}\sin x$, $P=(\pi,0,0)$.
+\end{enumerate}
+}
+%SOLUTION
+{\begin{enumerate}
+\item Tangent plane $x-y+z-1=0$ and normal line $\frac{x}{-1}=\frac{y}{1}=\frac{z-1}{-1}$.
+\item Tangent plane $y=1$ and normal line $(x=0, y=1+2t, z=0)$.
+\item Tangent plane $2x-z-2=0$ and normal line $(x=1+2t, y=0, z=-t)$.
+\item Tangent plane $z=1$ and normal line $(x=0, y=0, z=1+t)$.
+\item Tangent plane $z=-e^\pi(x-\pi)$ and normal line $(x=\pi-e^\pi t, y=0, z=-t)$.
+\end{enumerate}
+}
+%RESOLUTION
+{
+}
+
+
+\newproblem{derimp-15}{gen}{}
+%STATEMENT
+{Derivar implicitamente para deducir una fórmula para las siguientes derivadas:
+\begin{enumerate}
+\item $(\arctg x)'$.
+\item $(\arcsen x)'$.
+\end{enumerate}
+}
+%SOLUTION
+{\begin{enumerate}
+\item $(\arctg x)'=\frac{1}{1+x^2}$.
+\item $(\arcsen x)' = \frac{1}{\sqrt{1-x^2}}$.
+\end{enumerate}
+}
+%RESOLUTION
+{
+}
