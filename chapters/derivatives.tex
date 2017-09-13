@@ -1,13 +1,13 @@
-% Autor: Alfredo Sánchez Alberca (asalber@ceu.es)
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
 
 \newproblem{der-1}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Estudiar si es derivable la función $f(x)=\sqrt[3]{x-1}$ en el punto $x=1$.
 }
-%SOLUCIÓN
+%SOLUTION
 {La función no es derivable ya que $f'(1)=\lim_{h\rightarrow 0}\frac{f(1+h)-f(1)}{h} = \infty$.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {Aplicando la definición de derivada, tenemos:
 \begin{align*}
 f'(1) = \lim_{h\rightarrow 0}\frac{f(1+h)-f(1)}{h} = \lim_{h\rightarrow 0}\frac{\sqrt[3]{1+h-1}-\sqrt[3]{1-1}}{h} = \lim_{h\rightarrow 0}\frac{\sqrt[3]{h}}{h} = \lim_{h\rightarrow 0} h^{-2/3} = \infty.
@@ -17,13 +17,13 @@ Así pues, la función no es derivable en $x=1$.
 
 
 \newproblem*{der-2}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Comprobar que la función $f(x)=|x-1|$ es continua en $x=1$ pero no es derivable en dicho punto.
 }
 
 
 \newproblem*{der-3}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Estudiar la derivabilidad de $f$ en los puntos $x=-1$, $x=2$ y $x=3$ siendo
 \[ f(x)=
 \begin{cases}
@@ -37,7 +37,7 @@ x/2 & \mbox{si $x\in (2,3)$,} \\
 
 
 \newproblem*{der-4}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Estudiar la derivabilidad y calcular la derivada, donde exista, de la función
 \[ f(x)=
 \begin{cases}
@@ -53,7 +53,7 @@ x^2 & \mbox{si $0\leq x \leq 1$,} \\
 
 
 \newproblem*{der-5}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Probar que no es derivable en $x=0$ la siguiente función:
 \[ f(x)=
 \begin{cases}
@@ -65,7 +65,7 @@ x^3 & \mbox{si $x<0$.}
 
 
 \newproblem{der-6}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Estudiar la derivabilidad de las siguientes funciones y hallar la función derivada correspondiente en los puntos donde exista.
 \begin{enumerate}
 \item  $f(x)=
@@ -77,7 +77,7 @@ $
 \item  $g(x)=2x+|x^2-2|$.
 \end{enumerate}
 }
-%SOLUCIÓN
+%SOLUTION
 {\begin{enumerate}
 \item La función es derivable en $x=0$ ya que $f'^-(0)=f'^+(0) = 1$ y la derivada es
 \[f'(x)=
@@ -97,7 +97,7 @@ g'(x)=
 \]
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {Para estudiar la derivabilidad primero vamos a expresar la función $|x^2-2|$ como una función a trozos. Para ello necesitamos saber en qué puntos la función $x^2-2$ es positiva, y en qué puntos es negativa. Si calculamos las raíces de esta función tenemos:
 \[
 |x^2-2| = 0 \Leftrightarrow x^2 = 2 \Leftrightarrow x = \pm \sqrt 2.
@@ -150,7 +150,7 @@ g'(x)=
 
 
 \newproblem{der-7}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Dada la función
 \[ f(x)=
 \begin{cases}
@@ -165,19 +165,19 @@ donde $a$ y $b$ son constantes.
 \item  ¿Existen algunos valores de las constantes para los que la función sea derivable en todo su dominio? En caso afirmativo, indicar cuáles son esos valores, y en caso contrario, razonar la respuesta.
 \end{enumerate}
 }
-%SOLUCIÓN
+%SOLUTION
 {\begin{enumerate}
 \item La función es continua en todo el dominio si $a=-3$ y $b=-1$.
 \item No existe ningún valor de $a$ y $b$ con los que la función sea derivable en todo el dominio.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-8}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Dada la función
 \[
 f(x)=
@@ -189,10 +189,10 @@ ax^2+b &  \mbox{si $0<x\leq c$},  \\
 \]
 con $a$, $b$ y $c$ constantes, ¿existe algún valor de las constantes de manera que la función sea continua y derivable en todo su dominio?
 }
-%SOLUCIÓN
+%SOLUTION
 {$a=\frac{1}{2e}, b=0, c=e^{1/2}.$
 }
-%RESOLUCIÓN
+%RESOLUTION
 {Estudiaremos primero la continuidad y luego la derivabilidad.
 
 Las funciones $\sen 2x$, $ax^2+b$ y $\ln x$ son todas contínuas en sus dominios, por tanto, basta con estudiar los puntos donde cambia la definici\'{o}n de la funci\'{o}n.
@@ -271,7 +271,7 @@ c &= e^{1/2}.
 
 
 \newproblem{der-9}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Hallar la función derivada de las siguientes funciones:
 \begin{multicols}{2}
 \begin{enumerate}
@@ -282,7 +282,7 @@ c &= e^{1/2}.
 \end{enumerate}
 \end{multicols}
 }
-%SOLUCIÓN
+%SOLUTION
 {\begin{enumerate}
 \item $\frac{df}{dx} = (1 + \tg^2((1+x)^3))3(1+x)^2$ y $df = (1 + \tg^2((1+x)^3))3(1+x)^2 dx$.
 \item $\frac{dg}{dx} = \frac{2(1+x)\log_3e}{(1+x)^2}$ y $dg = \frac{2(1+x)\log_3e}{(1+x)^2} dx$.
@@ -290,13 +290,13 @@ c &= e^{1/2}.
 \item $\frac{di}{dx} = \frac{1}{x^2+2}\frac{x}{\sqrt{x^2+1}}$ y $di = \frac{1}{x^2+2}\frac{x}{\sqrt{x^2+1}} dx$.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-10}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Find an equation of the tangent and normal lines to the curves given below at the given point $x_0$.
 \begin{multicols}{2}
 \begin{enumerate}
@@ -306,20 +306,20 @@ c &= e^{1/2}.
 \end{enumerate}
 \end{multicols}
 }
-%SOLUCIÓN
+%SOLUTION
 {\begin{enumerate}
 \item Tangent: $y-\frac{\pi}{2} = x-\frac{\pi}{2}$. Normal: $y-\frac{\pi}{2} = -x+\frac{\pi}{2}$.
 %\item Tangente: $y - 2^4 = -\frac{112}{3}(x-1)$. Normal: $y - 2^4 = \frac{3}{112}(x-1)$.
 \item Tangent: $y = x$. Normal: $y = -x$.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem*{der-11}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Determinar el ángulo formado por las curvas $y=x^4+1$ e $y=5x^2-3$ en el punto $x_{0}=1$.
 
 \noindent \textbf{Nota}: El ángulo que forman dos curvas es el ángulo
@@ -328,19 +328,19 @@ que forman sus tangentes.
 
 
 \newproblem{der-12}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Dadas las funciones $f(x)=\log \left(\dfrac{x^2}{2}\right)$ y $g(x)=x^3+2$, ¿existe algún valor de $x$ en el que la recta normal a $f$ y
 la recta tangente a $g$ en dicho punto sean paralelas? }
-%SOLUCIÓN
+%SOLUTION
 {$x=-1/6$.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-13}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Hallar la expresión de la derivada $n$-ésima de las siguientes funciones:
 \begin{multicols}{2}
 \begin{enumerate}
@@ -351,7 +351,7 @@ la recta tangente a $g$ en dicho punto sean paralelas? }
 \end{enumerate}
 \end{multicols}
 }
-%SOLUCIÓN
+%SOLUTION
 {\begin{enumerate}
 \item $f^{(n} = (\log a)^{n+1} a^x$.
 \item $g^{(n}=
@@ -365,13 +365,13 @@ la recta tangente a $g$ en dicho punto sean paralelas? }
 \item $j^{(n}(x) = \frac{(-1)^n \prod_{i=1}^{n}2i-1}{2^n}(1+x)^{-\frac{2n+1}{2}}$.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-14}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Dada la función
 \[f(x)=
 \begin{cases}
@@ -382,10 +382,10 @@ cx^2+dx, & \mbox{si $x>\pi$.} \\
 \]
 Calcular $a$, $b$, $c$ y $d$ para que la función sea continua y derivable en todo $\mathbb{R}$.
 }
-%SOLUCIÓN
+%SOLUTION
 {$a = \frac{1}{\pi^{2}}$, $b=\frac{2}{\pi}$, $c = \frac{1}{\pi^{2}}$ y $d=\frac{-2}{\pi}$.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {Estudiamos primero la continuidad. Los distintos trozos de la función están formados por funciones polinómicas y la función $\cos x$ que están definidas en todo su dominio, de manera que los únicos posibles puntos de discuntinuidad son los puntos donde cambia la definición de la función. Calculamos los límites laterales en dichos puntos: En el punto $x=-\pi$ tenemos
 \begin{align*}
 \lim_{x\rightarrow -\pi^{-}} f(x) &=  \lim_{x\rightarrow -\pi^{-}} ax^{2}+bx = a\pi^{2}-b\pi,\\
@@ -450,7 +450,7 @@ c = \frac{1}{\pi^{2}} \qquad \mbox{y} \qquad d=\frac{-2}{\pi}.
 
 
 \newproblem{der-15}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Se  considera la función $f:\mathbb{R}\to\mathbb{R}$ definida por:
 \[\renewcommand{\arraystretch}{2}
 f(x) =
@@ -467,14 +467,14 @@ Con los valores de $a$ y $b$ obtenidos en el apartado anterior:
 \item Hallar las asíntotas de $f$.
 \end{enumerate}
 }
-%SOLUCIÓN
+%SOLUTION
 {\begin{enumerate}
 \item $a=2$ y $b=-1$.
 \item La función es derivable en  todo $\mathbb{R}$ excepto en el 0.
 \item $y=0$ es asíntota horizontal por la derecha y  $y=x+1$ es una asíntota oblicua.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {\begin{enumerate}
 \item Estudiemos primero la continuidad de la función. Puesto que se trata de una función definida por tramos, primero estudiamos cada tramo por separado. En el primer tramo $x< 0$ la función vale $\frac{x^2+1}{x-1}$ que es una función racional, y por tanto,  está definida y es continua en todos los puntos excepto en aquellos que anulen en denominador. Pero el único punto que anula el denominador es $x=1$ que se sale del tramo de definición de la función, por lo que en el primer tramo la función es continua. En el segundo tramo $x>0$ la función vale $\frac{ax + b}
 {x^2  + 2x + 1}=\frac{ax+b}{(x+1)^2}$ que también es una función racional. El único punto que anula el denominador es $x=-1$, pero al igual que antes, se sale del intervalo de definición de la función, por lo que también es continua en su tramo. Por último queda estudiar la continuidad en $x=0$, que es donde cambia la definición de la función, por lo que procedemos a calcular los límites laterales:
@@ -559,7 +559,7 @@ de manera que la ecuación de la asíntota oblicua es $y=x+1$.
 
 
 \newproblem{der-16}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Dada la función:
 \[
 \renewcommand{\arraystretch}{2}
@@ -574,13 +574,13 @@ f(x)=
 \item Mediante la definición de derivada de una función en un punto, calcular tanto la derivada por la derecha como la derivada por la izquierda en $x=1$.
 \end{enumerate}
 }
-%SOLUCIÓN
+%SOLUTION
 {\begin{enumerate}
 \item En $x=1$ la función presenta una discontinuidad de 1ª especie de salto finito.
 \item La dervidad por la izquierda en $x=1$ vale $f'^-(1)=0$ y no existe la derivada por la derecha en dicho punto.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 \begin{enumerate}
 \item Para que la función sea continua en $x=1$ debe cumplirse que $\lim_{x\rightarrow 1}f(x)=f(1)$. En primer lugar, la función está bien definida en $x=1$ y $f(1)=0$. Veamos ahora los límites laterales:
@@ -612,7 +612,7 @@ En consecuencia, existe derivada por la izquierda pero no por la derecha.
 
 
 \newproblem*{der-17}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Calcular la derivada de las siguientes funciones:
 \begin{multicols}{2}
 \begin{enumerate}
@@ -647,7 +647,7 @@ En consecuencia, existe derivada por la izquierda pero no por la derecha.
 
 
 \newproblem*{der-18}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Hallar las derivadas sucesivas hasta la quinta de las siguientes funciones:
 \begin{multicols}{2}
 \begin{enumerate}
@@ -663,13 +663,13 @@ En consecuencia, existe derivada por la izquierda pero no por la derecha.
 
 
 \newproblem*{der-19}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Sea la función $f(x)=(x^{2}-x)3^{x/2}.$ Calcular su derivada n-ésima. Aplicar el resultado anterior para calcular la derivada de orden $100$.
 }
 
 
 \newproblem*{der-20}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Sea
 \[
 f(x)=
@@ -683,23 +683,23 @@ Calcular $a$ y $b$ para que la función sea continua y derivable en en cualquier
 
 
 \newproblem{der-21}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Calcular la derivada $n$-ésima de la siguiente función
 \[
 f(x)= \frac{x^2+2x+3}{x+2}.
 \]
 Apoyándose en el cálculo anterior, dar la expresión de la derivada de orden 20 de $f$.
 }
-%SOLUCIÓN
+%SOLUTION
 {$f^{(n}(x) = (-1)^n 3n!(x+2)^{-n+1}-$ y $f^{(20}(x) = 3\cdot 20!(x+2)^{-21}$.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-22}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Analizar la continuidad y la derivabilidad de la siguiente función
 \[
 f(x)=
@@ -709,13 +709,13 @@ f(x)=
 \end{cases}
 \]
 
-¿Qué sucede si cambiamos en el enunciado $e^{-x}$ por $e^{x}$?
+¿Qué sucede si cambiamos en el STATEMENT $e^{-x}$ por $e^{x}$?
 }
-%SOLUCIÓN
+%SOLUTION
 {La función es continua en todo $\mathbb{R}$ y derivable en $\mathbb{R}-\{0\}$.
 Si se cambia $e^{-x}$ por $e^{x}$ la función pasa a ser derivable en todo $\mathbb{R}$.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {Antes de estudiar la continuidad nos interesa eliminar el valor absoluto que aparece en la primera rama de deficinición de la función. Si observamos la definición de la función, la primera rama de definición es para los negativos ($x<0$); en consecuencia, como el argumento del valor absoluto es precisamente $x$, lo que hará el valor absoluto será cambiar de signo el valor de $x$. Por lo tanto, podemos sustituir $\left|x\right|$ por $-x$ en la primera rama de definición y de esta forma la función quedaría definida como sigue:
 \[
 f(x)=
@@ -789,21 +789,21 @@ e^{x} & \mbox{si $x\geq 0$}.
 
 
 \newproblem{der-23}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Air is being pumped into a spherical balloon of radius 10cm so that the radius increases at a rate of 2 cm/s.
 How fast will the volume of the balloon increase?\\
 Remark: The volume of a sphere is given by $V=\frac{4}{3}\pi r^3$.
 }
-%SOLUCIÓN
+%SOLUTION
 {$800\pi$ cm$^3$/s.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-24}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {En muchos vertebrados existe una relación entre la longitud del cráneo y la longitud de la espina dorsal que puede expresarse mediante la ecuación
 \[
 C(x) = a E(x)^b
@@ -814,16 +814,16 @@ Esta ecuación se conoce como \emph{ecuación alométrica}.
 ¿Para qué valores de $b$ es la función $C$ creciente, pero de forma que la relación $C/E$ disminuye al aumentar $E$?
 ¿En qué estado de desarrollo tienen los vertebrados cráneos mayores en relación con la longitud de sus cuerpos?
 }
-%SOLUCIÓN
+%SOLUTION
 {$800\pi$ cm$^3$/s.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-25}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {A car is moving on a straight line direction, with position given by the following function:
 \[
 e(t) = 4t^3 -2t +1.
@@ -831,16 +831,16 @@ e(t) = 4t^3 -2t +1.
 Find the speed and acceleration of the car.\\
 Remark: The acceleration is the variation rate of the instant velocity.
 }
-%SOLUCIÓN
+%SOLUTION
 {speed $v(t)=12t^2-2$ and acceleration $a(t)=24t$.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-26}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {An object is thrown verticall upwards.
 Assuming there is no air friction, the object will travel a distance given by the following equation:
 \[
@@ -855,34 +855,34 @@ Compute the speed at the moment of maximum height.
 With what speed?
 \end{enumerate}
 }
-%SOLUCIÓN
+%SOLUTION
 {\begin{enumerate}
 \item Speed $v(t)=v_0-gt$ and acceleration $a(t)=-g$.
 \item Maximum height $9.83$ m at $1.42$ s. The speed at that moment vanishes.
 \item The object fall to the ground at $2.83$ s with speed $-13.89$ m/s.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-27}{qui}{}
-%ENUNCIADO
+%STATEMENT
 {A liquid solution is kept in a cylindrical pipette of radius 5 mm.
 Suppose the liquid is taken out of the pipette at a rate of 0.5 ml per second;
 compute the rate of change of the level of liquid in the pipette.
 }
-%SOLUCIÓN
+%SOLUTION
 {$-0.00637$ cm/s.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-28}{qui}{}
-%ENUNCIADO
+%STATEMENT
 {Radioactive decay is given by the following function:
 \[
 m(t) = m_0e^{-kt},
@@ -894,17 +894,17 @@ Compute the speed of decay at any given time $t$.\\
 Recall that the \emph{half life} of a radioactive material is the time it takes for a quantity to reduce to half its initial value.
 Suppose for certain radioactive material we have $k=0.002$, compute the half life of the material.
 }
-%SOLUCIÓN
+%SOLUTION
 {Speed of decay: $-km_0e^{-kt}$.\\
 Half life: 346.57 years.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-29}{med}{}
-%ENUNCIADO
+%STATEMENT
 {The radius of a sphericall cell is equal to 5 $\mu$m, with a possible error of $0.2$ $\mu$m; compute the error in the measurement of the
 area of the cell.
 More generally, if the error in the measurment of the radius is $2\%$, what is the error in the value of the surface of
@@ -912,16 +912,16 @@ the cell?\\
 Remark: The surface of a sphere of radius $r$ is given by $S=4\pi r^2$.
 Solve the problem by means of the linear approximation (tangent line) of a function.
 }
-%SOLUCIÓN
+%SOLUTION
 {For an radius error of $0.2$ $\mu$m the approximate error in the area is $8\pi$ $\mu\mbox{m}^2$, and for a relative error of $2\%$
 the approximate relative error in the area is $4\%$.}
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-30}{med}{}
-%ENUNCIADO
+%STATEMENT
 {Blood flows through an artery at a speed $v$, which is related to the radius $r$ of the artery by the following expression, known as
 Poiseuille's law,
 \[
@@ -930,29 +930,29 @@ v(r) = cr^2.
 As mentioned above, $v$ is the speed of the flow, $r$ the radius of the artery, which we will assume to be cylindrical, and $c$ is a constant.
 Assume the radius can be measured with a precision of 5\%; calculate the precision in the in the computation of the speed.
 }
-%SOLUCIÓN
+%SOLUTION
 {$10\%$.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-31}{qui}{}
-%ENUNCIADO
+%STATEMENT
 {A cylinder of radius $r = 4$ cm and height $h = 3$ is heated, and so its dimensions change with speed given by $\dfrac{dr}{dt}=\dfrac{dh}{dt}= 1$ cm/s.
 Find the approximate change in the volume of the cylinder at 5 and 10 seconds after the heating process starts.
 }
-%SOLUCIÓN
+%SOLUTION
 {$dV = 2\pi r h dt + \pi r^2 dt$ and at the initial moment $dV = 40\pi dt$. 5 seconds after the approximate rate of change is $dV(5) = 40\pi 5 = 200\pi$ cm$^3$/s, and 10 seconds after $dV(10) = 40\pi 10 = 400\pi$ cm$^3$/s.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-32}{amb}{}
-%ENUNCIADO
+%STATEMENT
 {The speed $v(n)$ at which a plant grows depends on the amount of nitrogen available $n$ by the following relation:
 \[
 v(n) = \frac{an}{k+n},	\quad n\geq 0,
@@ -960,15 +960,15 @@ v(n) = \frac{an}{k+n},	\quad n\geq 0,
 where $a$ and $k$ are positive constants.
 Study the growth of this function, and explain your results.
 }
-%SOLUCIÓN
+%SOLUTION
 {The speed increases as $n$ increases but each time with less force, so that for $n\rightarrow \infty$ the speed becomes stable. }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-33}{qui}{}
-%ENUNCIADO
+%STATEMENT
 {The pH measures the concentration of hydrogen ions H$^+$ in an aqueous solution.
 It is defined by
 \[
@@ -977,32 +977,32 @@ It is defined by
 Compute the derivative of the pH as a function of the concentration of H$^+$.
 Study the growth of the pH function.
 }
-%SOLUCIÓN
+%SOLUTION
 {The pH decreases as the concentration of hydrogen ions H$^+$ increase.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{der-34}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Compute the derivative function of $f(x)=x^3-2x^2+1$ at the points $x=-1$, $x=0$ and $x=1$.
 Explain your result.
 Find an equation of the tangent line to the graph of $f$ at each of the three given points.
 }
-%SOLUCIÓN
+%SOLUTION
 {$f'(-1)=7$, $f'(0)=0$ y $f'(1)=-1$.\\
 Tangent line at $x=-1$: $y=-2+7(x+1)$.\\
 Tangent line at $x=0$: $y=1$.\\
 Tangent line at $x=1$: $y=-(x-1)$.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 \newproblem{der-35}{qui}{*}
-%ENUNCIADO
+%STATEMENT
 {
 In certain chemical process, the concentration of certain substance $c$ depends on the concentration of two other substances $a$
 and $b$, by the following equation $c=\sqrt[3]{ab^2}$.
@@ -1010,10 +1010,10 @@ Suppose that at certain moment, when $a=b=2$ mg/mm$^3$, the concentrations of $a
 $0.4$ mg$\cdot$ mm$^{-3}$/s, respectively.
 Approximate the concentration of $c$ after 2 seconds.
 }
-%SOLUCIÓN
+%SOLUTION
 {$c'(t_0)=1/3$ mg$\cdot$mm$^{-3}$/s.\\
 $c(t_0+2)\approx 8/3$  mg$\cdot$mm$^{-3}$.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }

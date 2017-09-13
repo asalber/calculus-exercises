@@ -1,18 +1,17 @@
-% Autor: Alfredo Sánchez Alberca (asalber@ceu.es)
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
 
 \newproblem*{tay-1}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Consider the function $f(x)=\sqrt{x+1}$.
 \begin{enumerate}
 \item  Compute the Taylor polynomial of $f$, of degree $4$, centered at $x=0$.
 \item Obtain two approximate values of $\sqrt{1.02}$ by means of degrees 2 and 4 Taylor polynomials.
 \end{enumerate}
-\end{enumerate}
 }
 
 
 \newproblem{tay-2}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Consider the sine function $f(x) = \sin x$.
 \begin{enumerate}
 \item Compute the third degree Taylor polynomial centered at the point $x=\pi/6$.
@@ -20,54 +19,54 @@ Use this polynomial to approximate $\sin (1/2)$. %Provide an upper bound for the
 \item Give an approximate value of $\sin (1/2)$ using a fifth degree Taylor polynomial centered at the point $x=0$. %Give an upper bound for the error in your approximation.
 \end{enumerate}
 }
-%SOLUCIÓN
+%SOLUTION
 {
 \begin{enumerate}
 \item $P^3_{f,\pi/6}(x) = \frac{1}{2}+\frac{\sqrt{3}}{2}(x-\pi/6)-\frac{1}{4}(x-\pi/6)^2-\frac{\sqrt{3}}{12}(x-\pi/6)^3$.\\
 $\sen 1/2 \approx P^3_{f,\pi/6}(1/2) = 0.4794255322$.\\
 %$|R^3_{f,\pi/6}(1/2)|\leq 6.46\cdot 10^{-9}$.
 \item $P^5_{f,0}(x) = x -\frac{1}{6} x^3 + \frac{1}{120}x^5$.\\
-$\sen 1/2 \approx P^5_{f,0}(1/2) = 0.4794270833$.\\
+$\sin 1/2 \approx P^5_{f,0}(1/2) = 0.4794270833$.\\
 %$|R^5_{f,0}(1/2)|\leq 2.170\cdot 10^{-5}$.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{tay-3}{gen}{}
-%ENUNCIADO
-{Compute the second degree Taylor polynomial of the funtion $f(x)=\sqrt[3]{x}$ in a neighborhood of the point $x=1$.
+%STATEMENT
+{Compute the second degree Taylor polynomial of the function $f(x)=\sqrt[3]{x}$ in a neighborhood of the point $x=1$.
 }
-%SOLUCIÓN
+%SOLUTION
 {$P^2_{f,1}(x) = 1+\frac{1}{3}(x-1)-\frac{2}{18}(x-1)^2$.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{tay-4}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Compute the third degree Maclaurin polynomial for the function $f(x)=\arcsin x$.
 }
-%SOLUCIÓN
+%SOLUTION
 {$P^3_{f,0}(x) = x+\frac{1}{6}x^3$.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem*{tay-5}{gen}{}
-%ENUNCIADO
-{Calcular $\cos 1$ con un error menor de $10^{-7}$ usando aproximaciones de Taylor.
+%STATEMENT
+{Compute $\cos 1$ with an error less than $10^{-7}$ using Taylor polynomials.
 }
 
 
 \newproblem{tay-6}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Dadas las funciones
 $f(x)=e^x$ y $g(x)=\cos x$, se pide:
 \begin{enumerate}
@@ -78,19 +77,19 @@ $f(x)=e^x$ y $g(x)=\cos x$, se pide:
    \[ \lim_{x\rightarrow 0}\frac{e^x-\cos x}{x}.\]
 \end{enumerate}
 }
-%SOLUCIÓN
+%SOLUTION
 {\begin{enumerate}
 \item $P^2_{f,0}(x) = 1+x+\frac{1}{2}x^2$ y $P^2_{g,0}(x) = 1-\frac{1}{2}x^2$.
 \item $\lim_{x\rightarrow 0}\frac{e^x-\cos x}{x} = \lim_{x\rightarrow 0}\frac{x+x^2}{x} = 1$.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{tay-7}{far}{*}
-%ENUNCIADO
+%STATEMENT
 {The function $C(t)$ measures the concentration (in mg/dl) of a drug in the bloodstream as function of time (in hours):
 \[
 C(t) = \frac{1}{{1 + e^{-2t}}}
@@ -101,14 +100,14 @@ C(t) = \frac{1}{{1 + e^{-2t}}}
 \item Use the previous polynomial to compute approximately the concentration of drug in the bloodstream after 15 minutes.
 \end{enumerate}
 }
-%SOLUCIÓN
+%SOLUTION
 {
 \begin{enumerate}
 \item $P_{C,0}^3(t)=\frac{1}{2}+\frac{1}{2}t+0\frac{t^2}{2!}-1\frac{t^3}{3!}=\frac{1}{2}+\frac{1}{2}t-\frac{1}{6}t^3$.
 \item $P_{C,0}^3(0.25)= 0.6223958333 \mbox{ mg/dl}$.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {\begin{enumerate}
 \item
 La fórmula del polinomio de Maclaurin de orden 3 para la función $C(t)$ es:
@@ -158,24 +157,24 @@ C(0.25)\approx P_{C,0}^3(0.25)= \frac{1}{2}+\frac{1}{2}0.25-\frac{1}{6}0.25^3= 0
 
 
 \newproblem{tay-8}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Obtener el desarrollo en serie de Taylor hasta orden tres en el punto $1$ de la función
 \[f(x) = \ln\sqrt{\dfrac{x^2+1}{2}}.\]
 Utilizar el polinomio obtenido calcular una aproximación de $\ln\sqrt{1.22}$ y acotar el error cometido.
 }
-%SOLUCIÓN
+%SOLUTION
 {$P^3_{f,1}(x) = \frac{1}{2}(x-1)-\frac{1}{12}(x-1)^3$.\\
 $\ln\sqrt{1.22} \approx P^3_{f,1}(1.2) = 0.0993333$.\\
 $|R^3_{f,1}(1.2)|\leq 1.25\cdot 10^{-4}$.
 
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{tay-9}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Dada la función $f(x)=\arctg(x/2)$ se pide:
 \begin{enumerate}
 \item Calcular el polinomio de Maclaurin de orden 3.
@@ -183,20 +182,20 @@ $|R^3_{f,1}(1.2)|\leq 1.25\cdot 10^{-4}$.
 \item Dar una cota del error cometido.
 \end{enumerate}
 }
-%SOLUCIÓN
+%SOLUTION
 {\begin{enumerate}
 \item $P^3_{f,0}(x) =  \frac{1}{2}x-\frac{1}{24}x^3$.
 \item $\arctan 0.05 \approx P^3_{f,0}(0.1) = 0.0499583333$.
 \item $|R^3_{f,0}(0.1)|\leq 3.08\cdot 10^{-7}$.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{tay-10}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Dada la función $f(x)=\dfrac{1}{1-x}$ con $x\neq 1$, se pide:
 \begin{enumerate}
 \item Calcular el polinomio de Maclaurin de $f$ de grado 4.
@@ -205,7 +204,7 @@ $|R^3_{f,1}(1.2)|\leq 1.25\cdot 10^{-4}$.
 \item ¿Hasta qué grado tendríamos que llegar para conseguir una aproximación de $f(0.03)$ con un error menor de $10^{-10}$?
 \end{enumerate}
 }
-%SOLUCIÓN
+%SOLUTION
 {\begin{enumerate}
 \item $P^4_{f,0}(x) = 1 + x + x^2 + x^3 + x^4$.
 \item $P^n_{f,0}(x) = 1 + x + x^2 + \cdots + x^n$.
@@ -213,27 +212,27 @@ $|R^3_{f,1}(1.2)|\leq 1.25\cdot 10^{-4}$.
 \item $|R^n_{f,0}(0.03)| \leq \frac{0.03^{n+1}}{(0.97)^{n+2}}\leq 10^{-10}$ para $n\geq 6$.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {
 }
 
 
 \newproblem{tay-11}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Dada la función $f(x)=\tg(x/2)$, se pide:
 \begin{enumerate}
 \item Aproximar $\tg(0.1)$ mediante un polinomio de Taylor de grado 3 para la función $f$.
 \item Dar una cota del error cometido.
 \end{enumerate}
 }
-%SOLUCIÓN
+%SOLUTION
 {
 \begin{enumerate}
 \item $T_3 (f,0)(0.2) = 0.1003333$.
 \item ${\rm Error} \le 0.00033$.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {\begin{enumerate}
 \item Sabemos que el desarrollo de Taylor de grado 3 de una función
 $f$,  centrado en $a$ y en función de $x$ viene dado por:
@@ -288,7 +287,7 @@ Por lo tanto:
 \[
 f(0) = 0;\;f'(0) = 1/2;\;f''(0) = 0;\;f'''(0) = 1/4
 \]
-Con ello, el polinomio de Mac Laurin buscado es:
+Con ello, el polinomio de Maclaurin buscado es:
 \[
 T_3 (f,0)(x) = \frac{1}{2}x + \frac{1}{{24}}x^3
 \]
@@ -376,7 +375,7 @@ Con ello, la cota para el error cometido vale:
 
 
 \newproblem{tay-12}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Dada  la función $f(x) = 2\sqrt[3]{{1 + x}}$, se pide:
 \begin{enumerate}
 \item Hallar el polinomio de Maclaurin de tercer grado de la función.
@@ -384,14 +383,14 @@ Con ello, la cota para el error cometido vale:
 \item Dar una cota del error cometido.
 \end{enumerate}
 }
-%SOLUCIÓN
+%SOLUTION
 {\begin{enumerate}
 \item $P(3,f,0)(x)=2+\frac{2}{3}x-\frac{2}{9}x^2+\frac{10}{81}x^3$.
 \item $P(3,f,0)(0.125)= 2.080102258$.
 \item $|R_{3,f,0}(0.125)| \leq 2.00938\cdot 10^{-5}$.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {\begin{enumerate}
 \item   La fórmula del polinomio de Maclaurin de orden $3$ para la
     función $f$ es
@@ -448,20 +447,20 @@ $t=0$. Así pues, tenemos la siguiente cota
 
 
 \newproblem{tay-13}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Dada la función: $f(x) = \dfrac{2} {{\sqrt {3x+ 1} }}$
 \begin{enumerate}
-\item Obtener el polinomio de Mac Laurin de tercer grado.
+\item Obtener el polinomio de Maclaurin de tercer grado.
 \item Calcular el valor aproximado de $\dfrac{2}{1,3}$ empleando el polinomio anterior.
 \end{enumerate}
 }
-%SOLUCIÓN
+%SOLUTION
 {\begin{enumerate}
 \item $P(3,f,0)(x)= 2-3x+\frac{27}{4}x^2-\frac{135}{8}x^3$.
 \item $\frac{2}{1.3}\approx P(3,f,0)(0.23)=1.461756910$.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {\begin{enumerate}
 \item   La fórmula del polinomio de Maclaurin de orden $3$ para la función $f$ es
 \begin{equation}
@@ -497,7 +496,7 @@ Calculando el polinomio anterior en este punto tenemos
 
 
 \newproblem*{tay-14}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Sea la función
 \[
 f(x) = 2\sqrt[4]{{1 + x}}
@@ -511,7 +510,7 @@ f(x) = 2\sqrt[4]{{1 + x}}
 
 
 \newproblem*{tay-15}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {
 Sea la función $f(x)=x^{x}.$
 \begin{enumerate}
@@ -522,7 +521,7 @@ Sea la función $f(x)=x^{x}.$
 
 
 \newproblem*{tay-16}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Para la función:
 \[
 f(x)=\sqrt[3]{1+2x}
@@ -537,7 +536,7 @@ Calcular:
 
 
 \newproblem*{tay-17}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Teniendo en cuenta que $\sen (2x)=2\sen x \cos x$ y los desarrollos de McLarin de las funciones $\sen x$ y $\cos x$, ¿cuál será el desarrollo de Maclaurin de orden 3 para la función $\sen (2x)$?
 
 Calcular directamente el desarrollo de Maclaurin de orden 3 de la función $\sen (2x)$ para comprobar el resultado obtenido en el apartado anterior.
@@ -545,7 +544,7 @@ Calcular directamente el desarrollo de Maclaurin de orden 3 de la función $\sen
 
 
 \newproblem*{tay-18}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {En los libros de Cálculo se afirma que la función binómica, $(1+x)^p$, puede desarrollarse desarrollada mediante una serie de sumandos de la forma:
 \[
 \left( {1 + x} \right)^p  = 1 + px + \frac{{p(p - 1)}} {{2!}}x^2 + \frac{{p(p - 1)(p - 2)}} {{3!}}x^3  +  \cdots  + \frac{{p(p - 1) \cdots (p - k + 1)}} {{k!}}x^k
@@ -559,7 +558,7 @@ para todo $x$ si $p$ es un entero no negativo.
 
 
 \newproblem{tay-19}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {La concentración de un fármaco en sangre, en mg/dl, en función del tiempo, en horas, viene dada por la expresión:
 \[
 C(t) = \ln \left( {\frac{{t^2  + 2t + 1}}{{2t + 1}}} \right)
@@ -574,13 +573,13 @@ f(t) = 2\ln (t + 1) - \ln (2t + 1)
 \]
 \end{enumerate}
 }
-%SOLUCIÓN
+%SOLUTION
 {\begin{enumerate}
 \item $P_{C,0}^3(t) = t^2-2t^3$.
 \item $P_{C,0}^3(0.25) = 0.03125$.
 \item $P_{f,0}^2(t) = t^2$.
 \end{enumerate}}
-%RESOLUCIÓN
+%RESOLUTION
 {\begin{enumerate}
 \item La ecuación del polinomio de Maclaurin de orden 3 de $C$ es
 \begin{equation}
@@ -620,7 +619,7 @@ P_{f,0}^2(t) = t^2.
 
 
 \newproblem{tay-20}{gen}{}
-%ENUNCIADO
+%STATEMENT
 {Dada la función $\dfrac{\sen x+\cos x}{2}$:
 \begin{enumerate}
 \item  Utilizar el polinomio de Maclaurin de grado 3 para aproximar $\frac{\sen 1+\cos 1}{2}$.
@@ -628,14 +627,14 @@ P_{f,0}^2(t) = t^2.
 \item  Dar la cota de error cometida en ambas aproximaciones y decir cual es mejor.
 \end{enumerate}
 }
-%SOLUCIÓN
+%SOLUTION
 {\begin{enumerate}
 \item $P_0^3(x)=\frac{1}{2}+\frac{1}{2}x-\frac{1}{4}x^2-\frac{1}{12}x^3$ y $P_0^3(1)=\frac{2}{3}$.
 \item $P_{\pi/2}^2(x)=\frac{1}{2}-\frac{1}{2}(x-\pi/2)-\frac{1}{4}(x-\pi/2)^2$ y  $P_{\pi/2}^2(1)= 0.70395$.
 \item $|R_0^3(1)|\leq 0.04166$ y $|R_{\pi/2}^2(1)|\leq 0.03099$.
 \end{enumerate}
 }
-%RESOLUCIÓN
+%RESOLUTION
 {\begin{enumerate}
 \item  El polinomio de Maclaurin de grado 3 para $f(x)$ viene dado por la fórmula siguiente:
 \[
@@ -723,14 +722,14 @@ Podemos concluir que la segunda aproximación es mejor que la primera.
 
 
 \newproblem{tay-21}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Calcular el polinomio de Maclaurin de orden 4 de la función $\cos\frac{x}{3}$, y utilizarlo para aproximar $\cos\frac{\pi}{4}$, dando una
 cota del error cometido.
 }
-%SOLUCIÓN
+%SOLUTION
 {$P_0^4(x)=1-\dfrac{1}{18}x^2+\dfrac{1}{1944}x^4$, $P_0^4\left(\dfrac{3\pi }{4}\right) = 0.7074292$ y la cota del error cometido es $\left|R_0^4\left(\dfrac{3\pi}{4}\right)\right| \leq 0.00249.$
 }
-%RESOLUCIÓN
+%RESOLUTION
 {Llamando $f(x)=\cos\dfrac{x}{3}$, el polinomio que se nos pide viene dado por la fórmula siguiente:
 \[
 P_0^4(x)=f(0)+f^{\prime }(0)x+\frac{f^{\prime \prime }(0)}{2!}x^2+\frac{f^{\prime \prime \prime }(0)}{3!}x^3+\frac{f^{\text{iv}}(0)}{4!}x^4.
@@ -773,13 +772,13 @@ Este error puede acotarse fácilemente aprovechando que $\left|\sen(t/3)\right| 
 
 
 \newproblem{tay-22}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Calcular $0.98^{3/5}$ tomando hasta el término correspondiente a $n=3$ del desarrollo de Mac Laurin de la función $(1+x)^{3/5}$.
 }
-%SOLUCIÓN
+%SOLUTION
 {$P_{0}^{3}(x)=1+\dfrac{3}{5}x-\dfrac{3}{25}x^{2}+\dfrac{7}{125}x^{3}$ y $0.98^{3/5}\approx P_{0}^{3}(-0.02)= 0.9879515521$.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {Llamando $f(x)=(1+x)^{3/5}$, el polinomio que se nos pide viene dado por la fórmula siguiente:
 \[
 P_{0}^{3}(x)=f(0)+f^{\prime }(0)x+\frac{f^{\prime \prime }(0)}{2!}x^{2}+\frac{f^{\prime \prime \prime }(0)}{3!}x^{3}.
@@ -809,18 +808,18 @@ P_{0}^{3}(-0.02)=1+\dfrac{3}{5}(-0.02)-\dfrac{3}{25}(-0.02)^{2}+\frac{7}{125}(-0
 
 
 \newproblem{tay-23}{gen}{*}
-%ENUNCIADO
+%STATEMENT
 {Obtener polinomio de Maclaurin de grado 3 de las funciones $\sen x$ y $\tg x$, y utilizar los polinomios anteriores para calcular
 \[
 \lim_{x\rightarrow 0}\frac{\tg x-x}{x-\sen x}
 \]
 }
-%SOLUCIÓN
+%SOLUTION
 {$P_{0}^{3}(x)=0+1\cdot x+\frac{0}{2!}x^{2}+\frac{-1}{3!}x^{3}=x-\frac{x^{3}}{6}$,\\
 $Q_{0}^{3}(x)=0+1\cdot x+\frac{0}{2!}x^{2}+\frac{2}{3!}x^{3}=x+\frac{x^{3}}{3}$ y \\
 $\lim_{x\rightarrow 0}\frac{\tg x-x}{x-\sen x} = \lim_{x\rightarrow 0}\frac{x+\frac{x^{3}}{3}-x}{x-x+\frac{x^{3}}{6}} =2$.
 }
-%RESOLUCIÓN
+%RESOLUTION
 {La formula general para calcular el polinomio de Maclaurin de grado 3 de una función $f(x)$ es:
 \[
 P_{0}^{3}(x)=f(0)+f^{\prime }(0)x+\frac{f^{\prime \prime }(0)}{2!}x^{2}+\frac{f^{\prime \prime \prime }(0)}{3!}x^{3}.
