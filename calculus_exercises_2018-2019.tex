@@ -1,0 +1,260 @@
+%!TEX program = pdflatex
+% Author Alfredo Sánchez Alberca (asalber@ceu.es)
+
+\documentclass[a4paper,titlepage]{article}
+%===============================================
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[top=3cm, bottom=3cm, left=2.54cm, right=2.54cm, marginparwidth=2mm]{geometry}
+
+% COLORS
+\usepackage[table]{xcolor}
+\definecolor{color1}{RGB}{5,161,230} % Light blue
+\definecolor{color2}{RGB}{238,50,36} % Red
+\definecolor{color3}{RGB}{0,205,0} % Light Green
+\definecolor{ocre}{RGB}{243,102,25} % Define the orange color used for highlighting throughout the book
+\definecolor{blueceu}{RGB}{5,161,230} % Blue color of CEU logo
+\definecolor{greenceu}{RGB}{185,209,16} % Green color of CEU logo
+\definecolor{redceu}{RGB}{238,50,36} % Red color of CEU logo
+\definecolor{grayceu}{RGB}{111,107,83} % Gray color of CEU logo
+\definecolor{chaptergrey}{RGB}{5,161,230} % Blue color of CEU logo
+
+% MATH
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% GRAPHICS
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\usepackage{multicol}
+\usepackage[inline]{enumitem}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\textsc{\textcolor{blueceu}{CEU San Pablo University}}}
+\rhead{\textsl{\textsf{\textcolor{blueceu}{Department of Applied Math and Statistics}}}}
+\renewcommand{\headrulewidth}{0pt}
+
+\usepackage{booktabs}
+
+
+% SECTIONS
+\usepackage{titlesec}
+\titleformat*{\section}{\normalfont\Large\bfseries\color{color1}}
+
+
+% % SOLUTIONS
+% \newif\ifsolution
+% % \solutiontrue  % Comment to hide solutions
+%
+% \newtheoremstyle{solution} % Theorem style name
+% {-5pt} % Space above
+% {7pt} % Space below
+% {\normalfont} % Body font
+% {-28pt} % Indent amount
+% {\bf} % Theorem head font
+% {\kern-11.5pt} % Punctuation after theorem head
+% {19pt} % Space after theorem head
+% {\begin{tikzpicture}
+% \draw (0,0) node [fill=color2, xshift=4mm, inner
+% sep=2pt]{\includegraphics[scale=0.3]{img/bulb}};
+% \end{tikzpicture}}
+%
+% \theoremstyle{solution}
+% \newtheorem{solutionT}{Solution}
+%
+% \RequirePackage[framemethod=default]{mdframed}
+%
+% % Solution box
+% \newmdenv[skipabove=7pt,
+% skipbelow=10pt,
+% rightline=false,
+% leftline=true,
+% topline=false,
+% bottomline=false,
+% linecolor=color2,
+% backgroundcolor=black!5,
+% innerleftmargin=5pt,
+% innerrightmargin=5pt,
+% innertopmargin=4pt,
+% innerbottommargin=5pt,
+% leftmargin=0pt,
+% rightmargin=0pt,
+% linewidth=4pt]{solBox}
+%
+% \usepackage{comment}
+% \ifsolution
+%   \newenvironment{sol}{\ifsolution\begin{solBox}\begin{solutionT}}{\end{solutionT}\end{solBox}\fi}
+% \else
+%   \excludecomment{sol}
+% \fi
+
+% PDF
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{pdfauthor={Alfredo Sánchez Alberca (asalber@ceu.es)}, pdftitle={Calculus problems} }
+\usepackage{url}
+
+\renewcommand{\floatpagefraction}{.8}
+\renewcommand{\textfraction}{.1}
+
+% SOLUTIONS SETTINGS
+\usepackage{probsoln-alf}
+\reversemarginpar
+\showshortanswers
+%\showanswers
+%\PSNrandseed{2007}
+
+\begin{document}
+\sloppy
+
+\title{\vskip 2cm
+\Huge \textbf{\textsf{\quad \textcolor{blueceu}{CALCULUS PROBLEMS}\quad}}\\
+   \vskip 1cm
+\Large \sffamily
+\begin{tabular}{rl}
+\textcolor{blueceu}{Subject:} & Mathematics\\
+\textcolor{blueceu}{Course:} & 1\textsuperscript{st}\\
+\textcolor{blueceu}{Degree:} &  Pharmacy\\
+\textcolor{blueceu}{Year:} & 2018-2019\\
+\textcolor{blueceu}{Author:} & Alfredo S\'anchez Alberca\\  & (\url{asalber@ceu.es})
+\end{tabular}
+}
+
+\author{}
+\date{\includegraphics[scale=0.3]{img/logo_uspceu_01}}
+
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\input{chapters/derivatives}
+\input{chapters/extrema}
+\input{chapters/taylor}
+\input{chapters/separable_differential_equations}
+\input{chapters/vectorial_derivatives}
+\input{chapters/partial_derivatives}
+\input{chapters/implicit_derivatives}
+\input{chapters/implicit_derivatives_n_variables}
+\input{chapters/taylor_n_variables}
+\input{chapters/extrema_n_variables}
+
+\section{One-variable Differentiable Calculus}
+\begin{enumerate}[leftmargin=*]
+% Derivatives
+\item \useproblem{der-34}
+\item \useproblem{der-33}
+\item \useproblem{der-32}
+\item \useproblem{der-10}
+\item \useproblem{der-23}
+\item \useproblem{der-27}
+\item \useproblem{der-28}
+\item \useproblem{der-25}
+\item \useproblem{der-26}
+\item \useproblem{der-31}
+\item \useproblem{der-29}
+\item \useproblem{der-35}
+\item \useproblem{der-30}
+% Taylor
+% \item \useproblem{tay-2}
+% \item \useproblem{tay-3}
+% \item \useproblem{tay-4}
+% \item \useproblem{tay-7}
+% Extrema
+\item \useproblem{ext-1}
+\item \useproblem{ext-2}
+\item \useproblem{ext-12}
+\item \useproblem{ext-8}
+\item \useproblem{ext-9}
+\item \useproblem{ext-3}
+\item \useproblem{ext-5}
+\item \useproblem{ext-7}
+\end{enumerate}
+
+\section{Ordinary Differential Equations}
+\begin{enumerate}[leftmargin=*,resume]
+\item \useproblem{edosep-1}
+\item \useproblem{edosep-2}
+\item \useproblem{edosep-3}
+\item \useproblem{edosep-4}
+\item \useproblem{edosep-13}
+\item \useproblem{edosep-6}
+\item \useproblem{edosep-7}
+\item \useproblem{edosep-11}
+\item \useproblem{edosep-14}
+\item \useproblem{edosep-16}
+\item \useproblem{edosep-18}
+\item \useproblem{edosep-19}
+\item \useproblem{edosep-29}
+\item \useproblem{edosep-20}
+\item \useproblem{edosep-21}
+\item \useproblem{edosep-27}
+\item \useproblem{edosep-31}
+%\item \useproblem{edolin-1}
+%\item \useproblem{edolin-2}
+\item \useproblem{edosep-32}
+\item \useproblem{edosep-5}
+%\item \useproblem{edolin-3}
+\end{enumerate}
+%
+%
+\section{Several variables Differentiable Calculus}
+\begin{enumerate}[leftmargin=*,resume]
+% Vectorial fields and trajectories
+% \item \useproblem{derpar-1}
+% \item \useproblem{derpar-2}
+% \item \useproblem{derpar-4}
+% \item \useproblem{derpar-11}
+% \item \useproblem{derpar-12}
+% \item \useproblem{derpar-13}
+% \item \useproblem{derpar-14}
+% Partial derivatives
+\item \useproblem{par-1}
+\item \useproblem{par-32}
+\item \useproblem{par-33}
+\item \useproblem{par-34}
+\item \useproblem{par-3}
+\item \useproblem{par-5}
+\item \useproblem{par-4}
+\item \useproblem{par-35}
+\item \useproblem{par-38}
+\item \useproblem{par-39}
+\item \useproblem{par-36}
+\item \useproblem{par-25}
+\item \useproblem{par-45}
+\item \useproblem{par-40}
+\item \useproblem{par-41}
+\item \useproblem{par-42}
+\item \useproblem{par-43}
+\item \useproblem{par-46}
+\item \useproblem{derimp-1}
+\item \useproblem{derimp-2}
+\item \useproblem{derimp-3}
+\item \useproblem{derimp-13}
+\item \useproblem{derimp-14}
+\item \useproblem{derimpn-1}
+\item \useproblem{derimpn-2}
+\item \useproblem{derimpn-3}
+\item \useproblem{par-2}
+\item \useproblem{par-11}
+\item \useproblem{par-15}
+\item \useproblem{par-28}
+\item \useproblem{tayn-2}
+\item \useproblem{tayn-3}
+\item \useproblem{tayn-4}
+\item \useproblem{tayn-1}
+\item \useproblem{extn-5}
+\item \useproblem{extn-3}
+\item \useproblem{extn-4}
+\item \useproblem{extn-1}
+\item \useproblem{extn-2}
+\item \useproblem{extn-6}
+\end{enumerate}
+
+\vspace{2cm}
+
+\textsc{Remark}: The exercises with a ($\bigstar$) are exam exercises of previous years.
+
+\end{document}
